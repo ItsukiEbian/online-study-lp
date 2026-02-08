@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  /* LP: オンライン自習室 */
+  --color-surface: #f9fafb;
+  --color-ink: #111827;
+  --color-accent: #6366f1;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans-jp), sans-serif;
+    color: var(--color-ink);
+  }
+}
+
+/* 見出し用セリフ体（Next.js のフォント変数を使用） */
+.font-serif-jp {
+  font-family: var(--font-serif-jp), serif;
+}
