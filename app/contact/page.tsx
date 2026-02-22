@@ -15,7 +15,7 @@ function SimpleHeader() {
           href="/"
           className="text-lg font-semibold text-[#111827] transition hover:text-[#6366f1]"
         >
-          オンライン自習室
+          Study Ops
         </Link>
       </div>
     </header>
@@ -24,30 +24,21 @@ function SimpleHeader() {
 
 function SimpleFooter() {
   return (
-    <footer className="mt-auto border-t border-[#E5E7EB] bg-white px-6 py-12 md:px-10 lg:px-16">
-      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 md:flex-row">
+    <footer className="mt-auto border-t border-gray-100 bg-white py-10">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 md:flex-row md:px-8">
         <nav className="flex flex-wrap justify-center gap-6 text-sm">
-          <Link href="/#problem" className="text-[#6B7280] hover:text-[#111827]">
-            課題解決
-          </Link>
-          <Link href="/#features" className="text-[#6B7280] hover:text-[#111827]">
-            機能
-          </Link>
-          <Link href="/#pricing" className="text-[#6B7280] hover:text-[#111827]">
-            料金
-          </Link>
-          <Link href="/contact" className="text-[#6366f1] font-medium">
-            お問い合わせ
-          </Link>
-          <Link href="/privacy" className="text-[#6B7280] hover:text-[#111827]">
+          <Link href="/privacy" className="text-gray-500 transition-colors hover:text-gray-900">
             プライバシーポリシー
           </Link>
-          <Link href="/terms" className="text-[#6B7280] hover:text-[#111827]">
+          <Link href="/terms" className="text-gray-500 transition-colors hover:text-gray-900">
             利用規約
           </Link>
+          <Link href="/disclaimer" className="text-gray-500 transition-colors hover:text-gray-900">
+            免責事項
+          </Link>
         </nav>
-        <p className="text-sm text-[#9CA3AF]">
-          © {new Date().getFullYear()} オンライン自習室. All rights reserved.
+        <p className="text-sm text-gray-400">
+          © {new Date().getFullYear()} Study Ops. All rights reserved.
         </p>
       </div>
     </footer>

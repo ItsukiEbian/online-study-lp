@@ -13,7 +13,7 @@ function SimpleHeader() {
           href="/"
           className="text-lg font-semibold text-[#111827] hover:text-[#6366f1] transition"
         >
-          オンライン自習室
+          Study Ops
         </Link>
       </div>
     </header>
@@ -22,30 +22,21 @@ function SimpleHeader() {
 
 function SimpleFooter() {
   return (
-    <footer className="border-t border-[#E5E7EB] bg-white px-6 py-12 md:px-10 lg:px-16 mt-auto">
-      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 md:flex-row">
+    <footer className="mt-auto border-t border-gray-100 bg-white py-10">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 md:flex-row md:px-8">
         <nav className="flex flex-wrap justify-center gap-6 text-sm">
-          <Link href="/#problem" className="text-[#6B7280] hover:text-[#111827]">
-            課題解決
-          </Link>
-          <Link href="/#features" className="text-[#6B7280] hover:text-[#111827]">
-            機能
-          </Link>
-          <Link href="/#pricing" className="text-[#6B7280] hover:text-[#111827]">
-            料金
-          </Link>
-          <Link href="/#pricing" className="text-[#6B7280] hover:text-[#111827]">
-            お問い合わせ
-          </Link>
-          <Link href="/privacy" className="text-[#6B7280] hover:text-[#111827]">
+          <Link href="/privacy" className="text-gray-500 transition-colors hover:text-gray-900">
             プライバシーポリシー
           </Link>
-          <Link href="/terms" className="text-[#6366f1] font-medium">
+          <Link href="/terms" className="text-gray-500 transition-colors hover:text-gray-900">
             利用規約
           </Link>
+          <Link href="/disclaimer" className="text-gray-500 transition-colors hover:text-gray-900">
+            免責事項
+          </Link>
         </nav>
-        <p className="text-sm text-[#9CA3AF]">
-          © {new Date().getFullYear()} オンライン自習室. All rights reserved.
+        <p className="text-sm text-gray-400">
+          © {new Date().getFullYear()} Study Ops. All rights reserved.
         </p>
       </div>
     </footer>
@@ -61,12 +52,12 @@ export default function TermsPage() {
           利用規約
         </h1>
         <p className="mt-2 text-sm text-[#6B7280]">
-          2026年2月8日 制定
+          2026年2月9日 制定
         </p>
 
         <div className="mt-10 space-y-8 text-[#374151] leading-relaxed">
           <p>
-            この利用規約（以下「本規約」といいます。）は、[あなたのサービス名または会社名]（以下「当社」といいます。）が提供するオンライン自習室サービス（以下「本サービス」といいます。）の利用条件を定めるものです。登録ユーザーの皆さま（以下「ユーザー」といいます。）には、本規約に従って本サービスをご利用いただきます。
+            この利用規約（以下「本規約」といいます。）は、[あなたのサービス名]（以下「当社」といいます。）が提供するオンライン自習室サービス（以下「本サービス」といいます。）の利用条件を定めるものです。登録ユーザーの皆さま（以下「ユーザー」といいます。）には、本規約に従って本サービスをご利用いただきます。
           </p>
 
           <section>
@@ -103,9 +94,12 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-semibold text-[#111827] mb-3">第4条（利用料金および支払方法）</h2>
             <ol className="list-decimal pl-6 space-y-2">
-              <li>ユーザーは、本サービスの有料部分（Proプラン等）を利用する場合、当社が別途定め本サイトに表示する利用料金を、当社が指定する方法により支払うものとします。</li>
+              <li>本サービスの有料プラン（以下「有料プラン」といいます。）は、サブスクリプション方式とします。</li>
+              <li>ユーザーは、当社の定める方法（クレジットカード決済等）により利用料金を支払うものとします。</li>
+              <li>本サービスの契約期間は、利用契約の締結日（または利用開始日）から起算して1ヶ月間とし、以降も解約手続きが行われない限り、1ヶ月ごとに自動的に更新されるものとします。</li>
+              <li>契約期間の途中で解約手続きが行われた場合でも、当該契約期間満了日までの利用料金は全額発生し、日割り計算等による返金は行わないものとします。なお、解約手続き完了後も、当該契約期間満了日までは本サービスを利用することができます。</li>
+              <li>前項の規定にかかわらず、当社の責めに帰すべき事由によりサービスが全く利用できなかった期間がある場合など、法令の定める場合はこの限りではありません。</li>
               <li>ユーザーが利用料金の支払を遅滞した場合には、ユーザーは年14.6％の割合による遅延損害金を支払うものとします。</li>
-              <li>一度支払われた利用料金については、理由の如何を問わず返金を行わないものとします。</li>
             </ol>
           </section>
 
@@ -113,24 +107,26 @@ export default function TermsPage() {
             <h2 className="text-lg font-semibold text-[#111827] mb-3">第5条（禁止事項）</h2>
             <p className="mb-3">ユーザーは、本サービスの利用にあたり、以下の行為をしてはなりません。</p>
             <div className="space-y-3">
-              <p className="font-medium text-[#111827]">1. 映像・配信に関する禁止事項</p>
+              <p className="font-medium text-[#111827]">1. 映像・配信内容に関する禁止事項</p>
               <ul className="list-disc pl-6 space-y-1">
-                <li>(1) 公序良俗に反する映像（わいせつ、暴力的、残虐な映像等）を配信する行為</li>
-                <li>(2) 他のユーザーまたは第三者の肖像権、プライバシーを侵害する映像を配信する行為</li>
-                <li>(3) 本サービスの画面を録画、スクリーンショット、キャプチャし、SNS等に公開する行為（他のユーザーのプライバシー保護のため）</li>
-                <li>(4) 政治活動、宗教活動、マルチ商法等の勧誘を目的とした配信や行為</li>
-                <li>(5) 生活音や雑音等により、他のユーザーの集中を著しく妨げる行為（音声機能がある場合）</li>
+                <li>(1) 法令または公序良俗に反する映像（わいせつ、暴力的、残虐な映像等）を配信する行為</li>
+                <li>(2) 過度に露出の多い服装（上半身裸を含む）、または下着姿等で配信する行為</li>
+                <li>(3) 自身の個人情報（住所が特定できる窓の外の風景、郵便物、クレジットカード、身分証等）が映り込む状態で配信する行為</li>
+                <li>(4) 勉強や作業の意図が見受けられない、長時間の睡眠や放置行為</li>
+                <li>(5) 飲酒、喫煙を行いながらの配信</li>
+                <li>(6) 政治活動、宗教活動、マルチ商法等の勧誘を目的とした配信や行為</li>
+                <li>(7) 生活音や雑音等により、他のユーザーの集中を著しく妨げる行為（音声機能がある場合）</li>
               </ul>
               <p className="font-medium text-[#111827] pt-2">2. その他の禁止事項</p>
               <ul className="list-disc pl-6 space-y-1">
-                <li>(1) 法令または公序良俗に反する行為</li>
-                <li>(2) 犯罪行為に関連する行為</li>
-                <li>(3) 当社のサーバーまたはネットワークの機能を破壊したり、妨害したりする行為</li>
-                <li>(4) 当社のサービスの運営を妨害するおそれのある行為</li>
-                <li>(5) 他のユーザーに関する個人情報等を収集または蓄積する行為</li>
-                <li>(6) 不正アクセスをし、またはこれを試みる行為</li>
-                <li>(7) 他のユーザーに成りすます行為</li>
-                <li>(8) 反社会的勢力等に対して直接または間接に利益を供与する行為</li>
+                <li>(1) 犯罪行為に関連する行為</li>
+                <li>(2) 当社のサーバーまたはネットワークの機能を破壊したり、妨害したりする行為</li>
+                <li>(3) 他のユーザーへの嫌がらせや誹謗中傷、ストーカー行為</li>
+                <li>(4) 他のユーザーに関する個人情報等を収集または蓄積する行為</li>
+                <li>(5) 不正アクセスをし、またはこれを試みる行為</li>
+                <li>(6) 他のユーザーに成りすます行為</li>
+                <li>(7) 反社会的勢力等に対して直接または間接に利益を供与する行為</li>
+                <li>(8) その他、当社が不適切と判断する行為</li>
               </ul>
             </div>
           </section>
@@ -138,23 +134,23 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-semibold text-[#111827] mb-3">第6条（本サービスの提供の停止等）</h2>
             <p className="mb-2">当社は、以下のいずれかの事由があると判断した場合、ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします。</p>
-            <ol className="list-decimal pl-6 space-y-1">
-              <li>本サービスにかかるコンピュータシステムの保守点検または更新を行う場合</li>
-              <li>地震、落雷、火災、停電または天災などの不可抗力により、本サービスの提供が困難となった場合</li>
-              <li>コンピュータまたは通信回線等が事故により停止した場合</li>
-              <li>その他、当社が本サービスの提供が困難と判断した場合</li>
-            </ol>
+            <ul className="list-none pl-4 space-y-1">
+              <li>(1) 本サービスにかかるコンピュータシステムの保守点検または更新を行う場合</li>
+              <li>(2) 地震、落雷、火災、停電または天災などの不可抗力により、本サービスの提供が困難となった場合</li>
+              <li>(3) コンピュータまたは通信回線等が事故により停止した場合</li>
+              <li>(4) その他、当社が本サービスの提供が困難と判断した場合</li>
+            </ul>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold text-[#111827] mb-3">第7条（利用制限および登録抹消）</h2>
             <p className="mb-2">当社は、ユーザーが以下のいずれかに該当する場合には、事前の通知なく、ユーザーに対して本サービスの全部もしくは一部の利用を制限し、またはユーザーとしての登録を抹消することができるものとします。</p>
-            <ol className="list-decimal pl-6 space-y-1">
-              <li>本規約のいずれかの条項に違反した場合</li>
-              <li>登録事項に虚偽の事実があることが判明した場合</li>
-              <li>料金等の支払債務の不履行があった場合</li>
-              <li>その他、当社が本サービスの利用を適当でないと判断した場合</li>
-            </ol>
+            <ul className="list-none pl-4 space-y-1">
+              <li>(1) 本規約のいずれかの条項に違反した場合</li>
+              <li>(2) 登録事項に虚偽の事実があることが判明した場合</li>
+              <li>(3) 料金等の支払債務の不履行があった場合</li>
+              <li>(4) その他、当社が本サービスの利用を適当でないと判断した場合</li>
+            </ul>
           </section>
 
           <section>
@@ -167,7 +163,8 @@ export default function TermsPage() {
             <ol className="list-decimal pl-6 space-y-2">
               <li>当社は、本サービスに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます。）がないことを明示的にも黙示的にも保証しておりません。</li>
               <li>当社は、本サービスに起因してユーザーに生じたあらゆる損害について、当社の故意または重過失による場合を除き、一切の責任を負いません。</li>
-              <li>当社は、本サービスに関して、ユーザーと他のユーザーまたは第三者との間において生じた取引、連絡または紛争等（カメラ映像を通じたトラブル等を含みます）について一切責任を負いません。</li>
+              <li>ユーザーは、本サービスが映像を共有するサービスであることを理解し、自身の背景、服装、映り込む物品等について自らの責任で管理するものとします。意図せず個人情報やプライバシーに関わる情報が配信された場合であっても、当社は一切の責任を負いません。</li>
+              <li>本サービスはオンライン上の公開された場としての性質を持ちます。ユーザーは、自身の配信する映像が他のユーザーによって閲覧され、スクリーンショット等で保存・共有される可能性があることを予め承諾するものとします。これに起因して生じたトラブルについて、当社は一切関知しません。</li>
             </ol>
           </section>
 
@@ -198,12 +195,17 @@ export default function TermsPage() {
             <h2 className="text-lg font-semibold text-[#111827] mb-3">第13条（準拠法・裁判管轄）</h2>
             <ol className="list-decimal pl-6 space-y-2">
               <li>本規約の解釈にあたっては、日本法を準拠法とします。</li>
-              <li>本サービスに関して紛争が生じた場合には、当社の本店所在地を管轄する裁判所（東京地方裁判所等）を専属的合意管轄とします。</li>
+              <li>本サービスに関して紛争が生じた場合には、当社の本店所在地（個人事業主の場合はその住所地）を管轄する裁判所を専属的合意管轄とします。</li>
             </ol>
           </section>
 
           <p className="text-center font-medium text-[#111827] pt-6">以上</p>
-          <p className="text-center text-sm text-[#6B7280]">2026年2月8日 制定</p>
+
+          <div className="mt-16 text-center">
+            <Link href="/" className="text-gray-600 underline transition-colors hover:text-gray-900">
+              ホームへ戻る
+            </Link>
+          </div>
         </div>
       </main>
       <SimpleFooter />
