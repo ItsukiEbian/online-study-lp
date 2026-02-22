@@ -23,12 +23,12 @@ export const staggerItem: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   },
 };
 
 const DEFAULT_VIEWPORT = { once: true, margin: "-100px" as const };
-const DEFAULT_TRANSITION = { duration: 0.8, ease: "easeOut" };
+const DEFAULT_TRANSITION = { duration: 0.8, ease: "easeOut" as const };
 
 /* ─── ScrollReveal ラッパー ─── */
 

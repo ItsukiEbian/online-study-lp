@@ -17,7 +17,7 @@ const fadeUp = {
   initial: { opacity: 0, y: 28 },
   whileInView: { opacity: 1, y: 0 },
   viewport: VP,
-  transition: { duration: 0.7, ease: "easeOut" },
+  transition: { duration: 0.7, ease: "easeOut" as const },
 };
 
 const containerVariants: Variants = {
@@ -30,7 +30,7 @@ const itemVariants: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
+    transition: { duration: 0.55, ease: "easeOut" as const },
   },
 };
 
