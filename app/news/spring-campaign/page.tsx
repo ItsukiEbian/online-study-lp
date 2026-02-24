@@ -63,7 +63,7 @@ export default function SpringCampaignPage() {
           {...fadeUp(0.1)}
           className="mt-4 flex items-center justify-center gap-4 text-sm text-gray-500"
         >
-          <time>2024/07/08</time>
+          <time>2026/02/24</time>
           <span className="rounded-full bg-blue-50 px-3 py-0.5 text-xs font-semibold text-blue-600">
             キャンペーン
           </span>
