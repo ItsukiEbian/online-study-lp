@@ -492,7 +492,7 @@ export default function Home() {
               href="/apply"
               className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
             >
-              今すぐ無料で体験
+              まずは7日間 無料トライアル
             </Link>
           </div>
 
@@ -611,7 +611,7 @@ export default function Home() {
                   onClick={() => setMenuOpen(false)}
                   className="rounded-lg bg-blue-600 px-6 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700"
                 >
-                  無料体験に申し込む
+                  まずは7日間 無料トライアル
                 </Link>
                 <a
                   href="https://app.studyops.jp/dashboard"
@@ -679,7 +679,7 @@ export default function Home() {
               whileTap={{ scale: 0.97 }}
             >
               <span className="block text-2xl font-bold md:text-3xl">
-                無料体験に申し込む
+                まずは7日間 無料トライアル
               </span>
             </motion.a>
           </motion.div>
@@ -696,7 +696,7 @@ export default function Home() {
             className="block w-full rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 px-4 py-3.5 text-center text-white shadow-md shadow-blue-600/25"
           >
             <span className="block text-lg font-bold leading-tight">
-              無料体験に申し込む
+              まずは7日間 無料トライアル
             </span>
           </a>
         </div>
@@ -1060,7 +1060,7 @@ export default function Home() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  無料体験に申し込む
+                  まずは7日間 無料トライアル
                 </motion.a>
               </div>
 

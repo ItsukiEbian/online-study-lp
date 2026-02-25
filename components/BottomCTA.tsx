@@ -37,7 +37,7 @@ export default function BottomCTA() {
               href="/apply"
               className="mt-6 inline-flex items-center rounded-lg bg-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-700"
             >
-              無料体験に申し込む
+              まずは7日間 無料トライアル
             </Link>
           </div>
 

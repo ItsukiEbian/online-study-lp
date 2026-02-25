@@ -48,7 +48,7 @@ export default function StandardCoursePage() {
               href="/apply"
               className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
             >
-              今すぐ無料で体験
+              まずは7日間 無料トライアル
             </Link>
           </div>
         </div>

@@ -51,7 +51,7 @@ export default function CourseSidebar() {
             href="/apply"
             className="block w-full rounded-lg bg-blue-600 px-4 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700"
           >
-            無料体験に申し込む
+            まずは7日間 無料トライアル
           </Link>
         </div>
       </div>
