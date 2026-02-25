@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, type ReactNode } from "react";
+import { useState, useEffect, useRef, useCallback, type ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
@@ -145,6 +145,12 @@ function TestimonialsCarousel() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [dims, setDims] = useState({ container: 0, card: 0, showTwo: false });
 
+  const touchRef = useRef<{ startX: number; startY: number; swiping: boolean }>({
+    startX: 0,
+    startY: 0,
+    swiping: false,
+  });
+
   const GAP = 24;
 
   useEffect(() => {
@@ -175,11 +181,14 @@ function TestimonialsCarousel() {
   const centerOffset = (dims.container - visibleW) / 2;
   const tx = centerOffset - pos * step;
 
-  const navigate = (dir: number) => {
-    if (animatingRef.current) return;
-    animatingRef.current = true;
-    setPos((p) => p + dir);
-  };
+  const navigate = useCallback(
+    (dir: number) => {
+      if (animatingRef.current) return;
+      animatingRef.current = true;
+      setPos((p) => p + dir);
+    },
+    [],
+  );
 
   const handleTransitionEnd = (e: React.TransitionEvent) => {
     if (e.propertyName !== "transform") return;
@@ -204,6 +213,33 @@ function TestimonialsCarousel() {
     }
   }, [skipAnim]);
 
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchRef.current = {
+      startX: e.touches[0].clientX,
+      startY: e.touches[0].clientY,
+      swiping: false,
+    };
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    const dx = e.touches[0].clientX - touchRef.current.startX;
+    const dy = e.touches[0].clientY - touchRef.current.startY;
+    if (!touchRef.current.swiping && Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 10) {
+      touchRef.current.swiping = true;
+    }
+  }, []);
+
+  const handleTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      if (!touchRef.current.swiping) return;
+      const dx = e.changedTouches[0].clientX - touchRef.current.startX;
+      const threshold = 40;
+      if (dx < -threshold) navigate(1);
+      else if (dx > threshold) navigate(-1);
+    },
+    [navigate],
+  );
+
   const arrow =
     "flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md transition-all hover:bg-gray-100";
 
@@ -221,7 +257,13 @@ function TestimonialsCarousel() {
           viewport={VP}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <div ref={containerRef} className="overflow-hidden">
+          <div
+            ref={containerRef}
+            className="touch-pan-y overflow-hidden"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <div
               className="flex"
               style={{
@@ -627,7 +669,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-4 text-base font-bold text-gray-700 md:text-xl">
-              〜偏差値58以上の中高に通う生徒限定〜
+              〜偏差値60以上の中高に通う生徒限定〜
             </p>
 
             <motion.a

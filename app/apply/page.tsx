@@ -18,9 +18,8 @@ const inputBase =
 const labelBase = "mb-1.5 block text-sm font-medium text-gray-700";
 
 const courses = [
-  "中学・高校受験",
-  "英語4技能・英検対策",
-  "大学受験対策",
+  "Standardプラン",
+  "Proプラン",
 ];
 
 const gradeOptions = [
