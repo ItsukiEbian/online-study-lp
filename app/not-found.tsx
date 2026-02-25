@@ -24,7 +24,7 @@ export default function NotFound() {
             </a>
             <Link
               href="/apply"
-              className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+              className="whitespace-nowrap rounded-lg bg-blue-600 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-blue-700 md:px-5 md:text-sm"
             >
               まずは7日間 無料トライアル
             </Link>

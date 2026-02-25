@@ -35,7 +35,7 @@ export default function BottomCTA() {
             </p>
             <Link
               href="/apply"
-              className="mt-6 inline-flex items-center rounded-lg bg-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-700"
+              className="mt-6 inline-flex items-center whitespace-nowrap rounded-lg bg-blue-600 px-6 py-3.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-blue-700 md:px-8 md:text-sm"
             >
               まずは7日間 無料トライアル
             </Link>

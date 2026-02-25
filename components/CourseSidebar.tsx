@@ -49,7 +49,7 @@ export default function CourseSidebar() {
         <div className="mt-6 border-t border-gray-100 pt-6">
           <Link
             href="/apply"
-            className="block w-full rounded-lg bg-blue-600 px-4 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+            className="block w-full whitespace-nowrap rounded-lg bg-blue-600 px-3 py-3 text-center text-xs font-semibold text-white transition-colors hover:bg-blue-700 md:px-4 md:text-sm"
           >
             まずは7日間 無料トライアル
           </Link>

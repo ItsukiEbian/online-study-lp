@@ -490,7 +490,7 @@ export default function Home() {
             </a>
             <Link
               href="/apply"
-              className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+              className="whitespace-nowrap rounded-lg bg-blue-600 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-blue-700 md:px-5 md:text-sm"
             >
               まずは7日間 無料トライアル
             </Link>
@@ -609,7 +609,7 @@ export default function Home() {
                 <Link
                   href="/apply"
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-lg bg-blue-600 px-6 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+                  className="whitespace-nowrap rounded-lg bg-blue-600 px-6 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700"
                 >
                   まずは7日間 無料トライアル
                 </Link>
@@ -678,7 +678,7 @@ export default function Home() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
             >
-              <span className="block text-2xl font-bold md:text-3xl">
+              <span className="block whitespace-nowrap text-lg font-bold md:text-2xl lg:text-3xl">
                 まずは7日間 無料トライアル
               </span>
             </motion.a>
@@ -695,7 +695,7 @@ export default function Home() {
             href="/apply"
             className="block w-full rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 px-4 py-3.5 text-center text-white shadow-md shadow-blue-600/25"
           >
-            <span className="block text-lg font-bold leading-tight">
+            <span className="block whitespace-nowrap text-base font-bold leading-tight">
               まずは7日間 無料トライアル
             </span>
           </a>
@@ -1056,7 +1056,7 @@ export default function Home() {
                 </p>
                 <motion.a
                   href="/apply"
-                  className="mt-6 inline-flex items-center rounded-lg bg-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-700"
+                  className="mt-6 inline-flex items-center whitespace-nowrap rounded-lg bg-blue-600 px-6 py-3.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-blue-700 md:px-8 md:text-sm"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
