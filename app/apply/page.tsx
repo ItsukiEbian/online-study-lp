@@ -14,8 +14,8 @@ const fadeUp = (delay = 0) => ({
 });
 
 const inputBase =
-  "w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20";
-const labelBase = "mb-1.5 block text-sm font-medium text-gray-700";
+  "w-full border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-500 focus:ring-1 focus:ring-slate-500/20";
+const labelBase = "mb-1.5 block text-sm font-medium text-slate-700";
 
 const courses = [
   "Standardプラン",
@@ -38,13 +38,13 @@ export default function ApplyPage() {
   const [state, handleSubmit] = useForm(FORMSPREE_ID);
 
   return (
-    <div className="flex min-h-screen flex-col bg-gray-50 text-gray-900">
+    <div className="flex min-h-screen flex-col bg-stone-50 text-slate-900">
       {/* ヘッダー */}
-      <header className="border-b border-gray-100 bg-white">
+      <header className="border-b border-slate-200/60 bg-stone-50">
         <div className="mx-auto flex h-16 max-w-5xl items-center px-4 md:px-8">
           <Link
             href="/"
-            className="text-lg font-bold text-gray-900 transition-colors hover:text-blue-600"
+            className="text-lg font-semibold font-serif tracking-wide text-slate-900 transition-colors hover:text-amber-700"
           >
             Study Ops
           </Link>
@@ -56,15 +56,15 @@ export default function ApplyPage() {
         <div className="w-full max-w-3xl">
           <motion.div {...fadeUp()} className="mb-8 text-center">
             <div className="mx-auto mb-3 flex items-center justify-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-blue-600" />
-              <span className="text-sm font-semibold text-blue-600">
+              <span className="h-1.5 w-1.5 rounded-full bg-amber-700" />
+              <span className="text-sm font-medium tracking-widest text-amber-700">
                 無料体験申し込み
               </span>
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">
+            <h1 className="text-2xl font-semibold font-serif text-slate-900 md:text-3xl">
               無料体験のお申し込み
             </h1>
-            <p className="mt-3 text-sm text-gray-500">
+            <p className="mt-3 text-sm text-slate-500">
               以下のフォームに必要事項をご記入の上、送信してください。
             </p>
           </motion.div>
@@ -73,16 +73,16 @@ export default function ApplyPage() {
             {state.succeeded ? (
               <motion.div
                 key="thanks"
-                className="rounded-2xl bg-white p-8 shadow-sm md:p-12"
+                className="border border-slate-200 bg-white p-8 md:p-12"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.4 }}
               >
                 <div className="text-center">
-                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-blue-50">
+                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center border border-slate-200 bg-slate-50">
                     <svg
-                      className="h-8 w-8 text-blue-600"
+                      className="h-8 w-8 text-amber-700"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={2}
@@ -95,17 +95,17 @@ export default function ApplyPage() {
                       />
                     </svg>
                   </div>
-                  <h2 className="text-xl font-bold text-gray-900 md:text-2xl">
+                  <h2 className="text-xl font-semibold font-serif text-slate-900 md:text-2xl">
                     お申し込みありがとうございます
                   </h2>
-                  <p className="mt-4 leading-relaxed text-gray-600">
+                  <p className="mt-4 leading-relaxed text-slate-600">
                     確認次第、担当者よりご連絡いたします。
                     <br />
                     しばらくお待ちください。
                   </p>
                   <Link
                     href="/"
-                    className="mt-8 inline-flex items-center rounded-lg bg-blue-600 px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+                    className="mt-8 inline-flex items-center bg-slate-900 px-8 py-3.5 text-sm font-medium tracking-wide text-white transition-colors hover:bg-slate-800"
                   >
                     トップページへ戻る
                   </Link>
@@ -114,7 +114,7 @@ export default function ApplyPage() {
             ) : (
               <motion.div
                 key="form"
-                className="rounded-2xl bg-white p-6 shadow-sm md:p-8"
+                className="border border-slate-200 bg-white p-8 md:p-10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
@@ -122,7 +122,7 @@ export default function ApplyPage() {
               >
                 {state.errors &&
                   state.errors.getFormErrors?.().length > 0 && (
-                    <div className="mb-6 rounded-lg bg-red-50 p-4 text-sm text-red-700">
+                    <div className="mb-6 bg-red-50 p-4 text-sm text-red-700">
                       {state.errors.getFormErrors().map((err) => (
                         <p key={err.message}>{err.message}</p>
                       ))}
@@ -252,17 +252,17 @@ export default function ApplyPage() {
                         {courses.map((course) => (
                           <label
                             key={course}
-                            className="flex cursor-pointer items-center gap-3 rounded-lg border border-gray-200 px-4 py-3 transition-colors hover:border-blue-300 hover:bg-blue-50/50 has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50"
+                            className="flex cursor-pointer items-center gap-3 border border-slate-200 px-4 py-3 transition-colors hover:border-slate-400 hover:bg-slate-50/50 has-[:checked]:border-slate-900 has-[:checked]:bg-slate-50"
                           >
                             <input
                               type="radio"
                               name="course"
                               value={course}
                               required
-                              className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-600"
+                              className="h-4 w-4 border-slate-300 text-slate-900 focus:ring-slate-500"
                               disabled={state.submitting}
                             />
-                            <span className="text-sm font-medium text-gray-700">
+                            <span className="text-sm font-medium text-slate-700">
                               {course}
                             </span>
                           </label>
@@ -279,14 +279,14 @@ export default function ApplyPage() {
                         name="privacy_agreement"
                         value="同意する"
                         required
-                        className="mt-0.5 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-600"
+                        className="mt-0.5 h-4 w-4 border-slate-300 text-slate-900 focus:ring-slate-500"
                         disabled={state.submitting}
                       />
-                      <span className="text-sm leading-relaxed text-gray-600">
+                      <span className="text-sm leading-relaxed text-slate-600">
                         <Link
                           href="/privacy"
                           target="_blank"
-                          className="font-medium text-blue-600 underline underline-offset-2 hover:text-blue-700"
+                          className="font-medium text-slate-800 underline underline-offset-2 hover:text-amber-700"
                         >
                           プライバシーポリシー
                         </Link>
@@ -301,7 +301,7 @@ export default function ApplyPage() {
                     <motion.button
                       type="submit"
                       disabled={state.submitting}
-                      className="w-full rounded-lg bg-blue-600 py-4 text-base font-semibold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
+                      className="w-full bg-slate-900 py-4 text-base font-medium tracking-wide text-white transition-colors hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
                       whileHover={state.submitting ? {} : { scale: 1.01 }}
                       whileTap={state.submitting ? {} : { scale: 0.99 }}
                     >
@@ -318,26 +318,26 @@ export default function ApplyPage() {
       </main>
 
       {/* フッター */}
-      <footer className="border-t border-gray-100 bg-white py-10">
+      <footer className="border-t border-slate-200 bg-stone-50 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 md:flex-row md:px-8">
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
             <Link
               href="/privacy"
-              className="text-gray-500 transition-colors hover:text-gray-900"
+              className="text-slate-500 transition-colors hover:text-slate-800"
             >
               プライバシーポリシー
             </Link>
             <Link
               href="/terms"
-              className="text-gray-500 transition-colors hover:text-gray-900"
+              className="text-slate-500 transition-colors hover:text-slate-800"
             >
               利用規約
             </Link>
-            <Link href="/disclaimer" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/disclaimer" className="text-slate-500 transition-colors hover:text-slate-800">
               免責事項
             </Link>
           </nav>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-slate-400">
             © {new Date().getFullYear()} Study Ops. All rights reserved.
           </p>
         </div>

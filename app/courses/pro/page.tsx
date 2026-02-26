@@ -25,28 +25,28 @@ const staggerItem: Variants = {
 };
 
 function Dot() {
-  return <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />;
+  return <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-700" />;
 }
 
 export default function ProCoursePage() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+    <div className="min-h-screen bg-stone-50 text-slate-900">
       {/* ヘッダー */}
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur-md">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-stone-50/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-          <Link href="/" className="text-lg font-bold text-gray-900">
+          <Link href="/" className="font-serif text-lg font-semibold tracking-wide text-slate-900">
             Study Ops
           </Link>
           <div className="flex items-center gap-4">
             <a
               href="https://app.studyops.jp/dashboard"
-              className="hidden text-sm font-bold text-gray-600 transition-colors hover:text-blue-600 md:inline"
+              className="hidden text-sm font-medium text-slate-600 transition-colors hover:text-amber-700 md:inline"
             >
               ログイン
             </a>
             <Link
               href="/apply"
-              className="whitespace-nowrap rounded-lg bg-blue-600 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-blue-700 md:px-5 md:text-sm"
+              className="whitespace-nowrap border border-slate-900 bg-slate-900 px-4 py-2.5 text-xs font-medium tracking-wide text-white transition-colors hover:bg-slate-800 md:px-5 md:text-sm"
             >
               まずは7日間 無料トライアル
             </Link>
@@ -57,10 +57,10 @@ export default function ProCoursePage() {
       {/* メインコンテンツ */}
       <main className="mx-auto max-w-6xl px-4 pb-12 pt-28 md:px-8 md:pt-32">
         {/* パンくず */}
-        <motion.nav {...fadeUp()} className="mb-6 text-sm text-gray-500">
-          <Link href="/" className="hover:text-blue-600">ホーム</Link>
+        <motion.nav {...fadeUp()} className="mb-6 text-sm text-slate-500">
+          <Link href="/" className="hover:text-amber-700">ホーム</Link>
           <span className="mx-2">/</span>
-          <span className="text-gray-900">Proコース</span>
+          <span className="text-slate-900">Proコース</span>
         </motion.nav>
 
         <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
@@ -74,15 +74,15 @@ export default function ProCoursePage() {
             {/* ページヘッダー */}
             <motion.div {...fadeUp()} className="mb-10">
               <div className="mb-3 flex items-center gap-2">
-                <span className="h-2 w-2 shrink-0 rounded-full bg-blue-600" />
-                <span className="text-sm font-semibold tracking-wide text-blue-600">
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-700" />
+                <span className="text-sm font-medium tracking-widest text-amber-700">
                   コース紹介
                 </span>
               </div>
-              <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">
+              <h1 className="font-serif text-3xl font-semibold text-slate-900 md:text-4xl">
                 Proコース
               </h1>
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-600">
+              <p className="mt-4 max-w-3xl font-light text-base leading-loose text-slate-600">
                 「そもそも何から手をつければいいか分からない」「勉強時間は確保しているのに成績が伸びない」。その原因は、学習の「向かっている方向」が定まっていないからです。
                 <br />
                 Proプランは、Standardの「圧倒的な実行環境」に、医学部生メンターによる「目標からの完全逆算ルート」を掛け合わせた最上位プランです。
@@ -92,14 +92,14 @@ export default function ProCoursePage() {
             {/* コンテンツカード */}
             <motion.div
               {...fadeUp(0.1)}
-              className="space-y-12 rounded-2xl bg-white p-8 shadow-sm md:p-12"
+              className="space-y-12 border border-slate-200 bg-white p-10 md:p-14"
             >
               {/* コース概要 */}
               <section>
-                <h2 className="mb-4 text-xl font-bold text-gray-900 md:text-2xl">
+                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
                   コース概要
                 </h2>
-                <p className="leading-relaxed text-gray-700">
+                <p className="font-light leading-loose text-slate-700">
                   一般入試での志望校合格や、推薦を狙うための定期考査アップにおいて必要なのは、「いつ、何を、どのレベルまでやるべきか」を明確にすることです。本プランでは、専属メンターが現在の成績と目標から最短ルートを設計します。何をやるべきかという「迷い」を完全に消し去り、自分の実力に合わない勉強で時間を無駄にするリスクを防ぐことで、すべての努力を確実な結果へと直結させます。
                 </p>
               </section>
@@ -111,7 +111,7 @@ export default function ProCoursePage() {
                 whileInView="visible"
                 viewport={VP}
               >
-                <h2 className="mb-6 text-xl font-bold text-gray-900 md:text-2xl">
+                <h2 className="mb-6 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
                   対象となる生徒の課題
                 </h2>
                 <ul className="space-y-4">
@@ -128,8 +128,8 @@ export default function ProCoursePage() {
                     >
                       <Dot />
                       <div>
-                        <span className="font-bold text-gray-900">{item.label}：</span>
-                        <span className="text-gray-700">{item.text}</span>
+                        <span className="font-semibold text-slate-900">{item.label}：</span>
+                        <span className="font-light text-slate-700">{item.text}</span>
                       </div>
                     </motion.li>
                   ))}
@@ -143,10 +143,10 @@ export default function ProCoursePage() {
                 whileInView="visible"
                 viewport={VP}
               >
-                <h2 className="mb-4 text-xl font-bold text-gray-900 md:text-2xl">
+                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
                   Proプランのコア機能と詳細
                 </h2>
-                <p className="mb-6 leading-relaxed text-gray-700">
+                <p className="mb-6 font-light leading-loose text-slate-700">
                   Standardプランの「スマホ遮断・常時監視・質問し放題」機能のすべてに加え、以下の戦略的指導を行います。
                 </p>
 
@@ -170,12 +170,12 @@ export default function ProCoursePage() {
                       variants={staggerItem}
                       className="flex gap-3"
                     >
-                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
+                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center bg-slate-900 text-xs font-semibold text-white">
                         {i + 1}
                       </span>
                       <div>
-                        <h3 className="font-bold text-gray-900">{item.title}</h3>
-                        <p className="mt-1 leading-relaxed text-gray-700">{item.body}</p>
+                        <h3 className="font-semibold text-slate-900">{item.title}</h3>
+                        <p className="mt-1 font-light leading-loose text-slate-700">{item.body}</p>
                       </div>
                     </motion.li>
                   ))}
@@ -189,13 +189,13 @@ export default function ProCoursePage() {
                 viewport={VP}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="mb-4 text-xl font-bold text-gray-900 md:text-2xl">
+                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
                   運営・完遂方針
                 </h2>
-                <p className="leading-relaxed text-gray-700">
+                <p className="font-light leading-loose text-slate-700">
                   Proプランの目的は、生徒から「何をすべきか」という学習計画のストレスを完全に取り除き、実行だけに100%集中させることです。
                 </p>
-                <p className="mt-4 leading-relaxed text-gray-700">
+                <p className="mt-4 font-light leading-loose text-slate-700">
                   一般入試の極限の競争でも、校内の熾烈な定期考査争いでも、戦略がなければ無駄な努力に終わります。専属メンターが提示する【迷いのないルート】を、Standardプランの【最高峰の学習環境】で完遂し、2週に1度の【面談】で軌道を修正する。この極めて合理的なループを回し続けることで、最短・最速で目標の成績を突き抜ける実力を養成します。
                 </p>
               </motion.section>
@@ -213,20 +213,20 @@ export default function ProCoursePage() {
       </main>
 
       {/* フッター */}
-      <footer className="border-t border-gray-100 bg-white py-10">
+      <footer className="border-t border-slate-200 bg-stone-50 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 md:flex-row md:px-8">
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/privacy" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/privacy" className="text-slate-500 transition-colors hover:text-slate-800">
               プライバシーポリシー
             </Link>
-            <Link href="/terms" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/terms" className="text-slate-500 transition-colors hover:text-slate-800">
               利用規約
             </Link>
-            <Link href="/disclaimer" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/disclaimer" className="text-slate-500 transition-colors hover:text-slate-800">
               免責事項
             </Link>
           </nav>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-slate-400">
             © {new Date().getFullYear()} Study Ops. All rights reserved.
           </p>
         </div>

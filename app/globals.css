@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  /* LP: オンライン自習室 */
-  --color-surface: #f9fafb;
-  --color-ink: #111827;
-  --color-accent: #6366f1;
-  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --color-surface: #FAFAF7;
+  --color-ink: #1e293b;
+  --color-accent: #0f172a;
+  --color-gold: #C5A059;
+  --font-sans: var(--font-sans-jp), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif-jp), "游明朝", "Yu Mincho", "筑紫明朝", serif;
 }
 
 @layer base {
@@ -13,12 +14,8 @@
     scroll-behavior: smooth;
   }
   body {
-    font-family: var(--font-sans-jp), sans-serif;
+    font-family: var(--font-sans);
     color: var(--color-ink);
+    background-color: var(--color-surface);
   }
-}
-
-/* 見出し用セリフ体（Next.js のフォント変数を使用） */
-.font-serif-jp {
-  font-family: var(--font-serif-jp), serif;
 }

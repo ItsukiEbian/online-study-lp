@@ -20,7 +20,6 @@ export default function DocumentRequestDrawer({
     <AnimatePresence>
       {open && (
         <div className="fixed inset-0 z-[100]">
-          {/* オーバーレイ */}
           <motion.div
             className="absolute inset-0 bg-black/40"
             initial={{ opacity: 0 }}
@@ -30,35 +29,31 @@ export default function DocumentRequestDrawer({
             onClick={onClose}
           />
 
-          {/* ドロワー本体 */}
           <motion.div
-            className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-white shadow-2xl"
+            className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-stone-50 shadow-2xl"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
           >
-            {/* 閉じるボタン */}
             <div className="flex items-center justify-end px-5 pt-5">
               <button
                 type="button"
                 onClick={onClose}
-                className="flex h-9 w-9 items-center justify-center rounded-md text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-800"
+                className="flex h-9 w-9 items-center justify-center text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-800"
                 aria-label="閉じる"
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
 
-            {/* スクロール領域 */}
             <div className="flex-1 overflow-y-auto">
               {state.succeeded ? (
-                /* サンクスメッセージ */
                 <div className="flex h-full flex-col items-center justify-center px-6 text-center">
-                  <h3 className="text-2xl font-bold text-gray-900">
+                  <h3 className="font-serif text-2xl font-semibold text-slate-900">
                     資料請求ありがとうございました
                   </h3>
-                  <p className="mt-6 leading-relaxed text-gray-600">
+                  <p className="mt-6 font-light leading-loose text-slate-600">
                     ご返信に3営業日ほどお時間をいただいております。
                     <br />
                     3営業日を過ぎても返信がない場合は、お手数ですが再度お問い合わせをお願いいたします。
@@ -66,38 +61,35 @@ export default function DocumentRequestDrawer({
                   <button
                     type="button"
                     onClick={onClose}
-                    className="mt-10 cursor-pointer text-gray-600 underline transition-colors hover:text-gray-900"
+                    className="mt-10 cursor-pointer text-slate-600 underline transition-colors hover:text-slate-900"
                   >
                     ホームへ戻る
                   </button>
                 </div>
               ) : (
                 <>
-                  {/* ヘッダー */}
-                  <div className="border-b border-gray-200 px-8 pb-6">
-                    <h2 className="text-center text-2xl font-bold text-gray-900">
+                  <div className="border-b border-slate-200 px-8 pb-6">
+                    <h2 className="text-center font-serif text-2xl font-semibold text-slate-900">
                       資料請求フォーム
                     </h2>
-                    <p className="mt-4 text-sm leading-relaxed text-gray-600">
+                    <p className="mt-4 text-sm font-light leading-relaxed text-slate-600">
                       ご希望の資料をPDF形式でご提供させていただきます。詳細な情報をご希望の方は、お気軽にお問い合わせください。
                     </p>
                   </div>
 
-                  {/* フォーム */}
                   <div className="px-8 py-6">
                     {state.errors &&
                       state.errors.getFormErrors?.().length > 0 && (
-                        <div className="mb-5 rounded-md bg-red-50 p-4 text-sm text-red-700">
+                        <div className="mb-5 border border-red-200 bg-red-50 p-4 text-sm text-red-700">
                           {state.errors.getFormErrors().map((err) => (
                             <p key={err.message}>{err.message}</p>
                           ))}
                         </div>
                       )}
 
-                    <form onSubmit={handleSubmit} className="space-y-5">
-                      {/* お名前 */}
+                    <form onSubmit={handleSubmit} className="space-y-6">
                       <div>
-                        <label htmlFor="doc-name" className="mb-1.5 block text-sm font-bold text-gray-800">
+                        <label htmlFor="doc-name" className="mb-1.5 block text-sm font-medium text-slate-800">
                           お名前<span className="ml-1 text-red-500">*</span>
                         </label>
                         <input
@@ -105,7 +97,7 @@ export default function DocumentRequestDrawer({
                           type="text"
                           name="name"
                           required
-                          className="w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30"
+                          className="w-full border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-500 focus:ring-1 focus:ring-slate-500/30"
                           placeholder="山田　太郎"
                           disabled={state.submitting}
                         />
@@ -117,9 +109,8 @@ export default function DocumentRequestDrawer({
                         />
                       </div>
 
-                      {/* メールアドレス */}
                       <div>
-                        <label htmlFor="doc-email" className="mb-1.5 block text-sm font-bold text-gray-800">
+                        <label htmlFor="doc-email" className="mb-1.5 block text-sm font-medium text-slate-800">
                           連絡先メールアドレス<span className="ml-1 text-red-500">*</span>
                         </label>
                         <input
@@ -127,7 +118,7 @@ export default function DocumentRequestDrawer({
                           type="email"
                           name="email"
                           required
-                          className="w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30"
+                          className="w-full border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-500 focus:ring-1 focus:ring-slate-500/30"
                           placeholder="○○○@example.com"
                           disabled={state.submitting}
                         />
@@ -139,22 +130,20 @@ export default function DocumentRequestDrawer({
                         />
                       </div>
 
-                      {/* 電話番号 */}
                       <div>
-                        <label htmlFor="doc-phone" className="mb-1.5 block text-sm font-bold text-gray-800">
+                        <label htmlFor="doc-phone" className="mb-1.5 block text-sm font-medium text-slate-800">
                           電話番号
                         </label>
                         <input
                           id="doc-phone"
                           type="tel"
                           name="phone"
-                          className="w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30"
+                          className="w-full border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-500 focus:ring-1 focus:ring-slate-500/30"
                           placeholder="00000000000"
                           disabled={state.submitting}
                         />
                       </div>
 
-                      {/* 同意チェック */}
                       <div className="flex items-center justify-center pt-2">
                         <label className="flex cursor-pointer items-center gap-2">
                           <input
@@ -162,14 +151,14 @@ export default function DocumentRequestDrawer({
                             name="privacy_agreement"
                             value="同意する"
                             required
-                            className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                            className="h-4 w-4 border-slate-300 text-slate-800 focus:ring-slate-500"
                             disabled={state.submitting}
                           />
-                          <span className="text-sm text-gray-700">
+                          <span className="text-sm text-slate-700">
                             <Link
                               href="/privacy"
                               target="_blank"
-                              className="font-medium text-blue-600 underline underline-offset-2 hover:text-blue-700"
+                              className="font-medium text-slate-800 underline underline-offset-2 hover:text-amber-700"
                             >
                               プライバシーポリシー
                             </Link>
@@ -178,11 +167,10 @@ export default function DocumentRequestDrawer({
                         </label>
                       </div>
 
-                      {/* 送信ボタン */}
                       <motion.button
                         type="submit"
                         disabled={state.submitting}
-                        className="w-full rounded-md bg-blue-600 py-3 text-base font-bold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
+                        className="w-full bg-slate-900 py-3 text-base font-medium tracking-wide text-white transition-colors hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
                         whileHover={state.submitting ? {} : { scale: 1.01 }}
                         whileTap={state.submitting ? {} : { scale: 0.99 }}
                       >

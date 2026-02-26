@@ -9,11 +9,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function SimpleHeader() {
   return (
-    <header className="border-b border-[#E5E7EB] bg-white">
+    <header className="border-b border-slate-200 bg-stone-50">
       <div className="mx-auto flex max-w-5xl items-center px-6 py-4 md:px-10 lg:px-16">
         <Link
           href="/"
-          className="text-lg font-semibold text-[#111827] transition hover:text-[#6366f1]"
+          className="text-lg font-serif font-semibold tracking-wide text-slate-900 transition hover:text-amber-700"
         >
           Study Ops
         </Link>
@@ -24,20 +24,20 @@ function SimpleHeader() {
 
 function SimpleFooter() {
   return (
-    <footer className="mt-auto border-t border-gray-100 bg-white py-10">
+    <footer className="mt-auto border-t border-slate-200 bg-stone-50 py-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 md:flex-row md:px-8">
         <nav className="flex flex-wrap justify-center gap-6 text-sm">
-          <Link href="/privacy" className="text-gray-500 transition-colors hover:text-gray-900">
+          <Link href="/privacy" className="text-slate-500 transition-colors hover:text-slate-800">
             プライバシーポリシー
           </Link>
-          <Link href="/terms" className="text-gray-500 transition-colors hover:text-gray-900">
+          <Link href="/terms" className="text-slate-500 transition-colors hover:text-slate-800">
             利用規約
           </Link>
-          <Link href="/disclaimer" className="text-gray-500 transition-colors hover:text-gray-900">
+          <Link href="/disclaimer" className="text-slate-500 transition-colors hover:text-slate-800">
             免責事項
           </Link>
         </nav>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-slate-400">
           © {new Date().getFullYear()} Study Ops. All rights reserved.
         </p>
       </div>
@@ -46,19 +46,19 @@ function SimpleFooter() {
 }
 
 const inputBase =
-  "w-full rounded-lg border border-[#E5E7EB] bg-white px-4 py-3 text-[#111827] outline-none transition placeholder:text-[#9CA3AF] focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20";
-const labelBase = "mb-1.5 block text-sm font-medium text-[#374151]";
+  "w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-500 focus:ring-1 focus:ring-slate-500/20";
+const labelBase = "mb-1.5 block text-sm font-medium text-slate-700";
 
 export default function ContactPage() {
   const [state, handleSubmit] = useForm(FORM_ID);
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#F9FAFB] font-sans text-[#111827]">
+    <div className="flex min-h-screen flex-col bg-stone-50 font-sans text-slate-900">
       <SimpleHeader />
       <main className="mx-auto flex w-full max-w-lg flex-1 items-center px-6 py-12 md:py-16">
         <div className="w-full">
           <motion.h1
-            className="text-center text-2xl font-semibold text-[#111827] md:text-3xl"
+            className="text-center text-2xl font-serif font-semibold text-slate-900 md:text-3xl"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
@@ -70,13 +70,13 @@ export default function ContactPage() {
             {state.succeeded ? (
               <motion.div
                 key="success"
-                className="mt-8 rounded-2xl border border-[#E5E7EB] bg-white p-8 shadow-sm"
+                className="mt-8 border border-slate-200 bg-white p-8"
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.35 }}
               >
-                <p className="text-center leading-relaxed text-[#374151]">
+                <p className="text-center leading-relaxed font-light text-slate-700">
                   お問い合わせありがとうございます。確認次第ご連絡いたします。
                 </p>
                 <motion.div
@@ -87,7 +87,7 @@ export default function ContactPage() {
                 >
                   <Link
                     href="/"
-                    className="inline-flex items-center justify-center rounded-lg bg-[#6366f1] px-6 py-3 text-base font-medium text-white transition hover:bg-[#4F46E5]"
+                    className="inline-flex items-center justify-center bg-slate-900 px-6 py-3 text-base font-medium tracking-wide text-white transition hover:bg-slate-800"
                   >
                     トップページへ戻る
                   </Link>
@@ -96,14 +96,14 @@ export default function ContactPage() {
             ) : (
               <motion.div
                 key="form"
-                className="mt-8 rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-md md:p-8"
+                className="mt-8 border border-slate-200 bg-white p-6 md:p-8"
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.35 }}
               >
                 {state.errors && state.errors.getFormErrors?.().length > 0 && (
-                  <div className="mb-6 rounded-lg bg-red-50 p-4 text-sm text-red-700">
+                  <div className="mb-6 bg-red-50 p-4 text-sm text-red-700">
                     {state.errors.getFormErrors().map((err) => (
                       <p key={err.message}>{err.message}</p>
                     ))}
@@ -176,7 +176,7 @@ export default function ContactPage() {
                   <motion.button
                     type="submit"
                     disabled={state.submitting}
-                    className="w-full rounded-lg bg-[#6366f1] py-4 text-base font-medium text-white transition hover:bg-[#4F46E5] disabled:cursor-not-allowed disabled:opacity-70"
+                    className="w-full bg-slate-900 py-4 text-base font-medium tracking-wide text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-70"
                     whileHover={state.submitting ? {} : { scale: 1.01 }}
                     whileTap={state.submitting ? {} : { scale: 0.99 }}
                   >

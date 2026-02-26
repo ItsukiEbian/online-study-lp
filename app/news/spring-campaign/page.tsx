@@ -14,23 +14,23 @@ const fadeUp = (delay = 0) => ({
 
 export default function SpringCampaignPage() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-stone-50 text-slate-800">
       {/* ヘッダー */}
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur-md">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-stone-50/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-          <Link href="/" className="text-lg font-bold text-gray-900">
+          <Link href="/" className="font-serif text-lg font-semibold tracking-wide text-slate-900">
             Study Ops
           </Link>
           <div className="flex items-center gap-4">
             <a
               href="https://app.studyops.jp/dashboard"
-              className="hidden text-sm font-bold text-gray-600 transition-colors hover:text-blue-600 md:inline"
+              className="hidden text-sm font-medium text-slate-600 transition-colors hover:text-amber-700 md:inline"
             >
               ログイン
             </a>
             <Link
               href="/apply"
-              className="whitespace-nowrap rounded-lg bg-blue-600 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-blue-700 md:px-5 md:text-sm"
+              className="whitespace-nowrap border border-slate-900 bg-slate-900 px-4 py-2.5 text-xs font-medium tracking-wide text-white transition-colors hover:bg-slate-800 md:px-5 md:text-sm"
             >
               まずは7日間 無料トライアル
             </Link>
@@ -43,8 +43,8 @@ export default function SpringCampaignPage() {
         {/* セクションラベル */}
         <motion.div {...fadeUp()} className="text-center">
           <div className="mb-3 inline-flex items-center gap-2">
-            <span className="h-2 w-2 shrink-0 rounded-full bg-blue-600" />
-            <span className="text-sm font-semibold tracking-wide text-blue-600">
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-700" />
+            <span className="text-sm font-medium tracking-widest text-amber-700">
               新着情報・キャンペーン
             </span>
           </div>
@@ -53,7 +53,7 @@ export default function SpringCampaignPage() {
         {/* 大見出し */}
         <motion.h1
           {...fadeUp(0.05)}
-          className="text-center text-3xl font-bold leading-tight text-gray-900 md:text-4xl"
+          className="text-center font-serif text-3xl font-semibold leading-tight text-slate-900 md:text-4xl"
         >
           新春の入会キャンペーン実施中！
         </motion.h1>
@@ -61,10 +61,10 @@ export default function SpringCampaignPage() {
         {/* メタ情報 */}
         <motion.div
           {...fadeUp(0.1)}
-          className="mt-4 flex items-center justify-center gap-4 text-sm text-gray-500"
+          className="mt-4 flex items-center justify-center gap-4 text-sm text-slate-500"
         >
           <time>2026/02/24</time>
-          <span className="rounded-full bg-blue-50 px-3 py-0.5 text-xs font-semibold text-blue-600">
+          <span className="border border-slate-200 px-3 py-0.5 text-xs font-medium text-slate-600">
             キャンペーン
           </span>
         </motion.div>
@@ -72,7 +72,7 @@ export default function SpringCampaignPage() {
         {/* メイン画像 */}
         <motion.div
           {...fadeUp(0.15)}
-          className="mt-8 aspect-video w-full overflow-hidden rounded-xl bg-gray-200 bg-cover bg-center"
+          className="mt-8 aspect-video w-full overflow-hidden bg-slate-100 bg-cover bg-center"
           style={{
             backgroundImage:
               "url(https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=1200&q=80)",
@@ -82,7 +82,7 @@ export default function SpringCampaignPage() {
         {/* 本文 */}
         <motion.div
           {...fadeUp(0.2)}
-          className="mt-12 space-y-6 text-base leading-relaxed text-gray-800"
+          className="mt-12 space-y-6 text-base font-light leading-relaxed text-slate-700"
         >
           {/* リード文 */}
           <p>
@@ -99,13 +99,13 @@ export default function SpringCampaignPage() {
           </p>
 
           {/* 3つの理由 */}
-          <h2 className="!mt-12 text-xl font-bold text-gray-900 md:text-2xl">
+          <h2 className="!mt-12 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
             Study Opsが、難関大志望者に選ばれる3つの理由
           </h2>
 
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-gray-900">
+              <h3 className="font-serif font-semibold text-slate-900">
                 1. 現役医学部生への質問・監視環境
               </h3>
               <p className="mt-1">
@@ -113,7 +113,7 @@ export default function SpringCampaignPage() {
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-gray-900">
+              <h3 className="font-serif font-semibold text-slate-900">
                 2. 難関大を目指す学生のみが集う学習環境
               </h3>
               <p className="mt-1">
@@ -121,7 +121,7 @@ export default function SpringCampaignPage() {
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-gray-900">
+              <h3 className="font-serif font-semibold text-slate-900">
                 3. 深夜の延長戦も、早朝の朝活も。スマホを遮断する「学習環境」
               </h3>
               <p className="mt-1">
@@ -131,8 +131,8 @@ export default function SpringCampaignPage() {
           </div>
 
           {/* キャンペーン詳細 */}
-          <div className="!mt-12 rounded-2xl border border-blue-100 bg-blue-50/50 p-6 md:p-8">
-            <p className="text-center text-lg font-bold text-gray-900">
+          <div className="!mt-12 border border-amber-600/30 bg-amber-50/30 p-7 md:p-10">
+            <p className="text-center font-serif text-lg font-semibold text-slate-900">
               🔥 学年末・新学年準備キャンペーン 🔥
             </p>
             <p className="mt-4">
@@ -140,28 +140,28 @@ export default function SpringCampaignPage() {
             </p>
             <ul className="mt-6 space-y-5">
               <li>
-                <span className="font-bold text-gray-900">
+                <span className="font-semibold text-slate-900">
                   【特典1】1週間の無料体験
                 </span>
                 <br />
                 まずは1週間、医学部生への質問環境と今までになく勉強ができる学習環境を体験してみてください
               </li>
               <li>
-                <span className="font-bold text-gray-900">
+                <span className="font-semibold text-slate-900">
                   【特典2】最初の2ヶ月間のご利用料金が「半額」！
                 </span>
                 <br />
                 無料体験後、本登録へ進まれた【先着5名様】に限り、Standard/Pro両プランの月額料金を2ヶ月間半額でご提供します。
               </li>
               <li>
-                <span className="font-bold text-gray-900">
+                <span className="font-semibold text-slate-900">
                   【特典3】入会金2万円→0円！
                 </span>
                 <br />
                 先着15名に限り、入会金が今なら無料！
               </li>
               <li>
-                <span className="font-bold text-gray-900">
+                <span className="font-semibold text-slate-900">
                   キャンペーン期間：2026年2月21日〜3月15日まで
                 </span>
                 <br />
@@ -171,7 +171,7 @@ export default function SpringCampaignPage() {
           </div>
 
           {/* 結びの文 */}
-          <h2 className="!mt-12 text-xl font-bold text-gray-900 md:text-2xl">
+          <h2 className="!mt-12 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
             「環境と情報」への投資が、合否を分ける
           </h2>
           <p>
@@ -186,7 +186,7 @@ export default function SpringCampaignPage() {
         <motion.div {...fadeUp(0.25)} className="mt-14 text-center">
           <Link
             href="/"
-            className="text-gray-600 underline underline-offset-4 transition-colors hover:text-gray-900"
+            className="text-slate-600 underline underline-offset-4 transition-colors hover:text-slate-900"
           >
             ホームへ戻る
           </Link>
@@ -194,20 +194,20 @@ export default function SpringCampaignPage() {
       </main>
 
       {/* フッター */}
-      <footer className="border-t border-gray-100 bg-white py-10">
+      <footer className="border-t border-slate-200 bg-stone-50 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 md:flex-row md:px-8">
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/privacy" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/privacy" className="text-slate-500 transition-colors hover:text-slate-800">
               プライバシーポリシー
             </Link>
-            <Link href="/terms" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/terms" className="text-slate-500 transition-colors hover:text-slate-800">
               利用規約
             </Link>
-            <Link href="/disclaimer" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/disclaimer" className="text-slate-500 transition-colors hover:text-slate-800">
               免責事項
             </Link>
           </nav>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-slate-400">
             © {new Date().getFullYear()} Study Ops. All rights reserved.
           </p>
         </div>

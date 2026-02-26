@@ -25,28 +25,28 @@ const staggerItem: Variants = {
 };
 
 function Dot() {
-  return <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />;
+  return <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-700" />;
 }
 
 export default function StandardCoursePage() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+    <div className="min-h-screen bg-stone-50 text-slate-900">
       {/* ヘッダー */}
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur-md">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-          <Link href="/" className="text-lg font-bold text-gray-900">
+          <Link href="/" className="font-serif text-lg font-semibold tracking-wide text-slate-900">
             Study Ops
           </Link>
           <div className="flex items-center gap-4">
             <a
               href="https://app.studyops.jp/dashboard"
-              className="hidden text-sm font-bold text-gray-600 transition-colors hover:text-blue-600 md:inline"
+              className="hidden text-sm font-medium text-slate-600 transition-colors hover:text-amber-700 md:inline"
             >
               ログイン
             </a>
             <Link
               href="/apply"
-              className="whitespace-nowrap rounded-lg bg-blue-600 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-blue-700 md:px-5 md:text-sm"
+              className="whitespace-nowrap border border-slate-900 bg-slate-900 px-4 py-2.5 text-xs font-medium tracking-wide text-white transition-colors hover:bg-slate-800 md:px-5 md:text-sm"
             >
               まずは7日間 無料トライアル
             </Link>
@@ -57,10 +57,10 @@ export default function StandardCoursePage() {
       {/* メインコンテンツ */}
       <main className="mx-auto max-w-6xl px-4 pb-12 pt-28 md:px-8 md:pt-32">
         {/* パンくず */}
-        <motion.nav {...fadeUp()} className="mb-6 text-sm text-gray-500">
-          <Link href="/" className="hover:text-blue-600">ホーム</Link>
+        <motion.nav {...fadeUp()} className="mb-8 text-sm text-slate-500">
+          <Link href="/" className="hover:text-amber-700">ホーム</Link>
           <span className="mx-2">/</span>
-          <span className="text-gray-900">Standardコース</span>
+          <span className="text-slate-900">Standardコース</span>
         </motion.nav>
 
         <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
@@ -74,15 +74,15 @@ export default function StandardCoursePage() {
             {/* ページヘッダー */}
             <motion.div {...fadeUp()} className="mb-10">
               <div className="mb-3 flex items-center gap-2">
-                <span className="h-2 w-2 shrink-0 rounded-full bg-blue-600" />
-                <span className="text-sm font-semibold tracking-wide text-blue-600">
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-700" />
+                <span className="text-sm font-medium tracking-widest text-amber-700">
                   コース紹介
                 </span>
               </div>
-              <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">
+              <h1 className="font-serif text-3xl font-semibold text-slate-900 md:text-4xl">
                 Standardコース
               </h1>
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-600">
+              <p className="mt-4 max-w-3xl text-base font-light leading-loose text-slate-600">
                 Proプランでは、Standardプランに加え、担当制の医学部生メンターが目標から逆算した専用の学習ルートを設計し、無駄と迷いのない最短距離での実力向上を強制します。
               </p>
             </motion.div>
@@ -90,14 +90,14 @@ export default function StandardCoursePage() {
             {/* コンテンツカード */}
             <motion.div
               {...fadeUp(0.1)}
-              className="space-y-12 rounded-2xl bg-white p-8 shadow-sm md:p-12"
+              className="space-y-14 border border-slate-200 bg-white p-10 md:p-14"
             >
               {/* コース概要 */}
               <section>
-                <h2 className="mb-4 text-xl font-bold text-gray-900 md:text-2xl">
+                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
                   コース概要
                 </h2>
-                <p className="leading-relaxed text-gray-700">
+                <p className="font-light leading-loose text-slate-700">
                   同じ授業を受けているのに差がでるのはなぜか。それは「受けっぱなし」か「自ら勉強し自分の糧にするか」の違いです。「授業のききっぱなし」状態から脱却し、手元にある良質な教材を「自らの実力」へと変換するための実行管理に特化したプランです。志望校合格・成績UPに必要なのは新しい塾、授業ではなく、目の前の1冊を完璧にやり抜くことです。本プランでは、スマホの物理遮断と現役医学部生による常時監視・質問を組み合わせることで、いつでもどこでも「絶対にサボれない最高峰の自習環境」へとアップデートし、圧倒的な演習量を確保します。
                 </p>
               </section>
@@ -109,7 +109,7 @@ export default function StandardCoursePage() {
                 whileInView="visible"
                 viewport={VP}
               >
-                <h2 className="mb-6 text-xl font-bold text-gray-900 md:text-2xl">
+                <h2 className="mb-8 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
                   対象となる生徒の課題
                 </h2>
                 <ul className="space-y-4">
@@ -126,8 +126,8 @@ export default function StandardCoursePage() {
                     >
                       <Dot />
                       <div>
-                        <span className="font-bold text-gray-900">{item.label}：</span>
-                        <span className="text-gray-700">{item.text}</span>
+                        <span className="font-bold text-slate-900">{item.label}：</span>
+                        <span className="font-light text-slate-700">{item.text}</span>
                       </div>
                     </motion.li>
                   ))}
@@ -141,10 +141,10 @@ export default function StandardCoursePage() {
                 whileInView="visible"
                 viewport={VP}
               >
-                <h2 className="mb-4 text-xl font-bold text-gray-900 md:text-2xl">
+                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
                   Standardプランのコア機能と詳細
                 </h2>
-                <p className="mb-6 leading-relaxed text-gray-700">
+                <p className="mb-8 font-light leading-loose text-slate-700">
                   当プランでは、教科学習の指導ではなく「学習行動そのものの徹底管理」を行います。
                 </p>
 
@@ -176,12 +176,12 @@ export default function StandardCoursePage() {
                       variants={staggerItem}
                       className="flex gap-3"
                     >
-                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
+                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center bg-slate-900 text-xs font-bold text-white">
                         {i + 1}
                       </span>
                       <div>
-                        <h3 className="font-bold text-gray-900">{item.title}</h3>
-                        <p className="mt-1 leading-relaxed text-gray-700">{item.body}</p>
+                        <h3 className="font-bold text-slate-900">{item.title}</h3>
+                        <p className="mt-1 font-light leading-loose text-slate-700">{item.body}</p>
                       </div>
                     </motion.li>
                   ))}
@@ -195,10 +195,10 @@ export default function StandardCoursePage() {
                 viewport={VP}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="mb-4 text-xl font-bold text-gray-900 md:text-2xl">
+                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
                   運営・完遂方針
                 </h2>
-                <p className="leading-relaxed text-gray-700">
+                <p className="font-light leading-loose text-slate-700">
                   単なる「自習の推奨」ではなく、本質的な「やり抜く力（Grit）」の育成を重視しています。これは東大時代、成績上位者には総じて高い集中力とやり抜く力があった体験からスタートしました。成績上位者はみんな分かっています。成績の分かれ目は、やるか、やらないか。それだけだと。人間の意志の力は脆弱です。「今日こそはやろう」という決意は、簡単に崩れ去ります。だからこそ、当サービスでは「意志」に一切頼りません。カメラのセット、オンライン自習室への接続、医学部生の監視と質問対応。この「型」に自分をはめ込むだけで、自動的に2〜3時間の密度の高い演習が完了する。この「強制された成功体験」を毎日繰り返すことで、最終的にはどんな環境でも自分をコントロールできる本物の自律性を養います。
                 </p>
               </motion.section>
@@ -210,10 +210,10 @@ export default function StandardCoursePage() {
                 whileInView="visible"
                 viewport={VP}
               >
-                <h2 className="mb-4 text-xl font-bold text-gray-900 md:text-2xl">
+                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
                   モニター生が実証した「行動の変化」（Traction）
                 </h2>
-                <p className="mb-6 leading-relaxed text-gray-700">
+                <p className="mb-8 font-light leading-loose text-slate-700">
                   成績向上の手前にある、確実な「行動の変容」をお約束します。
                 </p>
 
@@ -239,8 +239,8 @@ export default function StandardCoursePage() {
                     >
                       <Dot />
                       <div>
-                        <span className="font-bold text-gray-900">{item.title}：</span>
-                        <span className="text-gray-700">{item.text}</span>
+                        <span className="font-bold text-slate-900">{item.title}：</span>
+                        <span className="font-light text-slate-700">{item.text}</span>
                       </div>
                     </motion.li>
                   ))}
@@ -254,7 +254,7 @@ export default function StandardCoursePage() {
                 viewport={VP}
                 transition={{ duration: 0.6 }}
               >
-                <p className="rounded-xl bg-blue-50 p-6 text-base font-medium leading-relaxed text-blue-900 md:p-8 md:text-lg">
+                <p className="border border-slate-200 bg-slate-50 p-7 font-serif text-base font-normal leading-loose text-slate-800 md:p-8 md:text-lg">
                   これらの徹底した環境管理により、今まで「持っているだけ」だった優秀な教材・授業が、確実に皆様の偏差値を押し上げる強力な武器へと変わります。
                 </p>
               </motion.section>
@@ -272,20 +272,20 @@ export default function StandardCoursePage() {
       </main>
 
       {/* フッター */}
-      <footer className="border-t border-gray-100 bg-white py-10">
+      <footer className="border-t border-slate-200 bg-white py-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 md:flex-row md:px-8">
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/privacy" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/privacy" className="text-slate-500 transition-colors hover:text-slate-800">
               プライバシーポリシー
             </Link>
-            <Link href="/terms" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/terms" className="text-slate-500 transition-colors hover:text-slate-800">
               利用規約
             </Link>
-            <Link href="/disclaimer" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/disclaimer" className="text-slate-500 transition-colors hover:text-slate-800">
               免責事項
             </Link>
           </nav>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-slate-400">
             © {new Date().getFullYear()} Study Ops. All rights reserved.
           </p>
         </div>

@@ -39,7 +39,7 @@ const itemVariants: Variants = {
    ──────────────────────────── */
 
 function Dot() {
-  return <span className="h-2 w-2 shrink-0 rounded-full bg-blue-600" />;
+  return <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-700" />;
 }
 
 function SectionLabel({
@@ -51,10 +51,10 @@ function SectionLabel({
 }) {
   return (
     <div
-      className={`mb-3 flex items-center gap-2 ${center ? "justify-center" : ""}`}
+      className={`mb-4 flex items-center gap-2.5 ${center ? "justify-center" : ""}`}
     >
       <Dot />
-      <span className="text-sm font-semibold tracking-wide text-blue-600">
+      <span className="text-sm font-medium tracking-widest text-amber-700">
         {children}
       </span>
     </div>
@@ -68,16 +68,16 @@ function SectionLabel({
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="rounded-lg border border-gray-300 bg-white p-5 md:p-6">
+    <div className="border border-slate-200 bg-white p-5 md:p-7">
       <button
         type="button"
         onClick={() => setOpen(!open)}
         className="flex w-full items-center gap-4 text-left"
       >
-        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-100 text-gray-500">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-slate-200 text-slate-400">
           {open ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
         </span>
-        <span className="text-base font-semibold text-gray-900 md:text-lg">
+        <span className="font-serif text-base font-semibold text-slate-800 md:text-lg">
           {q}
         </span>
       </button>
@@ -87,7 +87,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         transition={{ duration: 0.25, ease: "easeInOut" }}
         className="overflow-hidden"
       >
-        <p className="pt-4 pl-12 leading-relaxed text-gray-600">{a}</p>
+        <p className="pt-4 pl-12 leading-relaxed text-slate-600">{a}</p>
       </motion.div>
     </div>
   );
@@ -108,11 +108,11 @@ function FAQCategoryAccordion({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex w-full cursor-pointer items-center justify-between border-b border-gray-200 pb-3 text-left transition-colors hover:text-blue-600"
+        className="flex w-full cursor-pointer items-center justify-between border-b border-slate-300 pb-3 text-left transition-colors hover:text-amber-700"
       >
-        <h3 className="text-xl font-bold text-gray-800">【{title}】</h3>
+        <h3 className="font-serif text-xl font-semibold text-slate-800">【{title}】</h3>
         <ChevronRight
-          className={`h-5 w-5 shrink-0 text-gray-400 transition-transform duration-300 ${
+          className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-300 ${
             open ? "rotate-90" : ""
           }`}
         />
@@ -241,10 +241,10 @@ function TestimonialsCarousel() {
   );
 
   const arrow =
-    "flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md transition-all hover:bg-gray-100";
+    "flex h-12 w-12 items-center justify-center border border-slate-300 bg-white transition-all hover:bg-slate-50";
 
   return (
-    <section id="voices" className="bg-gray-50 py-20 md:py-28">
+    <section id="voices" className="bg-stone-50 py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <motion.div {...fadeUp}>
           <SectionLabel>利用者の声</SectionLabel>
@@ -281,22 +281,22 @@ function TestimonialsCarousel() {
                   className="flex-shrink-0"
                   style={{ width: `${dims.card}px` }}
                 >
-                  <div className="flex h-full flex-col justify-between rounded-2xl bg-white p-7 shadow-sm md:p-8">
+                  <div className="flex h-full flex-col justify-between border border-slate-200 bg-white p-7 md:p-9">
                     <div>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2.5">
                         <Dot />
-                        <span className="text-sm font-bold text-blue-600">
+                        <span className="text-sm font-medium tracking-wide text-amber-700">
                           {t.badge}
                         </span>
                       </div>
-                      <h3 className="mt-4 text-lg font-bold leading-snug text-gray-900">
+                      <h3 className="mt-5 font-serif text-lg font-semibold leading-snug text-slate-900">
                         &ldquo;{t.summary}&rdquo;
                       </h3>
-                      <p className="mt-4 text-sm leading-relaxed text-gray-600">
+                      <p className="mt-5 text-sm leading-loose text-slate-600">
                         {t.body}
                       </p>
                     </div>
-                    <p className="mt-6 text-right text-sm text-gray-500">
+                    <p className="mt-7 text-right text-sm text-slate-500">
                       {t.name}
                     </p>
                   </div>
@@ -313,7 +313,7 @@ function TestimonialsCarousel() {
             className={arrow}
             aria-label="前へ"
           >
-            <ChevronLeft className="h-5 w-5 text-blue-600" />
+            <ChevronLeft className="h-5 w-5 text-slate-700" />
           </button>
           <button
             type="button"
@@ -321,7 +321,7 @@ function TestimonialsCarousel() {
             className={arrow}
             aria-label="次へ"
           >
-            <ChevronRight className="h-5 w-5 text-blue-600" />
+            <ChevronRight className="h-5 w-5 text-slate-700" />
           </button>
         </div>
       </div>
@@ -461,11 +461,11 @@ export default function Home() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-stone-50 text-slate-800">
       {/* ===== ① ヘッダー ===== */}
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur-md">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-stone-50/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-          <Link href="/" className="text-lg font-bold text-gray-900">
+          <Link href="/" className="font-serif text-lg font-semibold tracking-wide text-slate-900">
             Study Ops
           </Link>
 
@@ -474,36 +474,35 @@ export default function Home() {
               <a
                 key={l.href}
                 href={l.href}
-                className="text-sm font-medium text-gray-600 transition-colors hover:text-blue-600"
+                className="text-sm font-normal text-slate-600 transition-colors hover:text-amber-700"
               >
                 {l.label}
               </a>
             ))}
           </nav>
 
-          <div className="hidden items-center gap-4 md:flex">
+          <div className="hidden items-center gap-5 md:flex">
             <a
               href="https://app.studyops.jp/dashboard"
-              className="text-sm font-bold text-gray-600 transition-colors hover:text-blue-600"
+              className="text-sm font-medium text-slate-600 transition-colors hover:text-amber-700"
             >
               ログイン
             </a>
             <Link
               href="/apply"
-              className="whitespace-nowrap rounded-lg bg-blue-600 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-blue-700 md:px-5 md:text-sm"
+              className="whitespace-nowrap border border-slate-900 bg-slate-900 px-4 py-2.5 text-xs font-medium tracking-wide text-white transition-colors hover:bg-slate-800 md:px-5 md:text-sm"
             >
               まずは7日間 無料トライアル
             </Link>
           </div>
 
-          {/* ハンバーガー（スマホ） */}
           <button
             type="button"
             className="flex items-center justify-center md:hidden"
             onClick={() => setMenuOpen(true)}
             aria-label="メニューを開く"
           >
-            <Menu className="h-6 w-6 text-gray-900" />
+            <Menu className="h-6 w-6 text-slate-900" />
           </button>
         </div>
       </header>
@@ -512,7 +511,7 @@ export default function Home() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed inset-0 z-[60] bg-white"
+            className="fixed inset-0 z-[60] bg-stone-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -524,9 +523,9 @@ export default function Home() {
                 type="button"
                 onClick={() => setMenuOpen(false)}
                 aria-label="メニューを閉じる"
-                className="flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-gray-100"
+                className="flex h-10 w-10 items-center justify-center transition-colors hover:bg-slate-100"
               >
-                <X className="h-6 w-6 text-gray-900" />
+                <X className="h-6 w-6 text-slate-900" />
               </button>
             </div>
 
@@ -537,7 +536,7 @@ export default function Home() {
                   <a
                     href="#"
                     onClick={() => { setMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                    className="text-2xl font-bold text-gray-900"
+                    className="font-serif text-2xl font-semibold text-slate-900"
                   >
                     ホーム
                   </a>
@@ -546,32 +545,32 @@ export default function Home() {
                   <a
                     href="#reasons"
                     onClick={() => setMenuOpen(false)}
-                    className="text-2xl font-bold text-gray-900"
+                    className="font-serif text-2xl font-semibold text-slate-900"
                   >
                     選ばれる理由
                   </a>
                 </li>
                 <li>
-                  <span className="text-2xl font-bold text-gray-900">コース紹介</span>
+                  <span className="font-serif text-2xl font-semibold text-slate-900">コース紹介</span>
                   <div className="mt-4 flex gap-6">
                     <Link
                       href="/courses/standard"
                       onClick={() => setMenuOpen(false)}
-                      className="inline-flex items-center gap-2 text-base text-gray-700"
+                      className="inline-flex items-center gap-2 text-base text-slate-700"
                     >
                       Standardコース
-                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
-                        <ChevronRight className="h-3.5 w-3.5 text-blue-600" />
+                      <span className="flex h-6 w-6 items-center justify-center border border-slate-200">
+                        <ChevronRight className="h-3.5 w-3.5 text-slate-700" />
                       </span>
                     </Link>
                     <Link
                       href="/courses/pro"
                       onClick={() => setMenuOpen(false)}
-                      className="inline-flex items-center gap-2 text-base text-gray-700"
+                      className="inline-flex items-center gap-2 text-base text-slate-700"
                     >
                       Proコース
-                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
-                        <ChevronRight className="h-3.5 w-3.5 text-blue-600" />
+                      <span className="flex h-6 w-6 items-center justify-center border border-slate-200">
+                        <ChevronRight className="h-3.5 w-3.5 text-slate-700" />
                       </span>
                     </Link>
                   </div>
@@ -580,7 +579,7 @@ export default function Home() {
                   <a
                     href="#voices"
                     onClick={() => setMenuOpen(false)}
-                    className="text-2xl font-bold text-gray-900"
+                    className="font-serif text-2xl font-semibold text-slate-900"
                   >
                     生徒さんの声
                   </a>
@@ -589,7 +588,7 @@ export default function Home() {
                   <a
                     href="#faq"
                     onClick={() => setMenuOpen(false)}
-                    className="text-2xl font-bold text-gray-900"
+                    className="font-serif text-2xl font-semibold text-slate-900"
                   >
                     よくある質問
                   </a>
@@ -598,24 +597,24 @@ export default function Home() {
                   <a
                     href="#news"
                     onClick={() => setMenuOpen(false)}
-                    className="text-2xl font-bold text-gray-900"
+                    className="font-serif text-2xl font-semibold text-slate-900"
                   >
                     お知らせ・キャンペーン
                   </a>
                 </li>
               </ul>
 
-              <div className="mt-12 flex flex-col gap-3">
+              <div className="mt-14 flex flex-col gap-3">
                 <Link
                   href="/apply"
                   onClick={() => setMenuOpen(false)}
-                  className="whitespace-nowrap rounded-lg bg-blue-600 px-6 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+                  className="whitespace-nowrap bg-slate-900 px-6 py-3.5 text-center text-sm font-medium tracking-wide text-white transition-colors hover:bg-slate-800"
                 >
                   まずは7日間 無料トライアル
                 </Link>
                 <a
                   href="https://app.studyops.jp/dashboard"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 px-6 py-3.5 text-center text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50"
+                  className="inline-flex items-center justify-center gap-2 border border-slate-300 px-6 py-3.5 text-center text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50"
                 >
                   <LogIn className="h-4 w-4" />
                   ログイン
@@ -627,8 +626,7 @@ export default function Home() {
       </AnimatePresence>
 
       {/* ===== ② ヒーロー ===== */}
-      <section className="overflow-hidden bg-white pt-16 md:pt-24">
-        {/* ── ビジュアル ── */}
+      <section className="overflow-hidden bg-stone-50 pt-16 md:pt-24">
         <motion.div
           initial={{ opacity: 0, scale: 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -645,20 +643,19 @@ export default function Home() {
           />
         </motion.div>
 
-        {/* ── テキスト＋CTA ── */}
         <div className="mx-auto max-w-3xl px-5 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25, ease: "easeOut" as const }}
-            className="relative z-10 pt-8 text-center md:pt-12"
+            className="relative z-10 pt-10 text-center md:pt-14"
           >
-            <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-6 py-2.5 text-lg font-bold text-blue-600 md:text-xl">
+            <span className="inline-flex items-center gap-2 border border-amber-600/40 bg-amber-50/60 px-6 py-2.5 text-base font-medium tracking-wide text-amber-800 md:text-lg">
               <Award className="h-5 w-5" />
-              今だけ入学キャンペーン実施中！
+              今だけ入学キャンペーン実施中
             </span>
 
-            <h1 className="mt-6 whitespace-nowrap text-xl font-black leading-tight tracking-tighter text-gray-900 sm:text-2xl md:text-4xl lg:text-5xl">
+            <h1 className="mt-8 whitespace-nowrap font-serif text-xl font-semibold leading-relaxed tracking-wide text-slate-900 sm:text-2xl md:text-4xl lg:text-5xl">
               家での勉強に、
               <br />
               かつてない緊張感を。
@@ -668,34 +665,34 @@ export default function Home() {
               24時間繋がるオンライン自習室。
             </h1>
 
-            <p className="mt-4 text-base font-bold text-gray-700 md:text-xl">
+            <p className="mt-5 text-base font-normal tracking-wider text-slate-600 md:text-xl">
               〜偏差値60以上の中高に通う生徒限定〜
             </p>
 
             <motion.a
               href="/apply"
-              className="mx-auto mt-10 block w-full max-w-md rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 px-6 py-5 text-center text-white shadow-lg shadow-blue-600/30 transition-all hover:shadow-xl hover:shadow-blue-600/40"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
+              className="mx-auto mt-12 block w-full max-w-md border border-slate-900 bg-slate-900 px-6 py-5 text-center text-white transition-all hover:bg-slate-800"
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <span className="block whitespace-nowrap text-lg font-bold md:text-2xl lg:text-3xl">
+              <span className="block whitespace-nowrap text-lg font-medium tracking-wide md:text-2xl lg:text-3xl">
                 まずは7日間 無料トライアル
               </span>
             </motion.a>
           </motion.div>
         </div>
 
-        <div className="h-16 md:h-24" />
+        <div className="h-20 md:h-32" />
       </section>
 
       {/* ===== スマホ追従CTA ===== */}
       <div className="fixed inset-x-0 bottom-0 z-50 md:hidden">
-        <div className="bg-white/90 px-4 pb-[env(safe-area-inset-bottom,8px)] pt-2 shadow-[0_-4px_24px_rgba(0,0,0,0.08)] backdrop-blur-md">
+        <div className="border-t border-slate-200/60 bg-stone-50/90 px-4 pb-[env(safe-area-inset-bottom,8px)] pt-2 backdrop-blur-md">
           <a
             href="/apply"
-            className="block w-full rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 px-4 py-3.5 text-center text-white shadow-md shadow-blue-600/25"
+            className="block w-full bg-slate-900 px-4 py-3.5 text-center text-white"
           >
-            <span className="block whitespace-nowrap text-base font-bold leading-tight">
+            <span className="block whitespace-nowrap text-base font-medium tracking-wide leading-tight">
               まずは7日間 無料トライアル
             </span>
           </a>
@@ -703,11 +700,11 @@ export default function Home() {
       </div>
 
       {/* ===== 問題提起 ===== */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-24 md:py-36">
         <div className="mx-auto max-w-5xl px-5 md:px-8">
           <motion.h2
             {...fadeUp}
-            className="text-center text-2xl font-black leading-snug text-gray-800 md:text-4xl"
+            className="text-center font-serif text-2xl font-semibold leading-relaxed text-slate-900 md:text-4xl"
           >
             塾の授業は受けているのに、
             <br />
@@ -719,12 +716,12 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VP}
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" as const }}
-            className="mx-auto mt-8 max-w-3xl text-center text-lg leading-relaxed text-gray-700 md:text-xl"
+            className="mx-auto mt-10 max-w-3xl text-center text-lg font-light leading-loose text-slate-700 md:text-xl"
           >
             その理由は、あなたの能力不足ではありません。
             <br />
-            <span className="relative inline-block font-black text-red-600">
-              <span className="absolute inset-x-0 bottom-0 h-[40%] bg-red-100" />
+            <span className="relative inline-block font-bold text-red-700">
+              <span className="absolute inset-x-0 bottom-0 h-[40%] bg-red-50" />
               <span className="relative">『圧倒的な自習不足』</span>
             </span>
             です。
@@ -739,35 +736,35 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VP}
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" as const }}
-            className="mt-10"
+            className="mt-14"
           >
             <Image
               src="/jishu-chart.jpg"
               alt="授業と自習の時間比率を示す図解"
               width={1200}
               height={800}
-              className="mx-auto h-auto w-full max-w-5xl rounded-xl shadow-md"
+              className="mx-auto h-auto w-full max-w-5xl shadow-sm"
             />
           </motion.div>
         </div>
       </section>
 
       {/* ===== 共感（自習の壁） ===== */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-stone-50 py-24 md:py-36">
         <div className="mx-auto max-w-2xl px-5 md:px-8">
           <motion.h2
             {...fadeUp}
-            className="mb-10 text-center text-2xl font-bold leading-snug text-gray-900 md:mb-14 md:text-3xl"
+            className="mb-14 text-center font-serif text-2xl font-semibold leading-relaxed text-slate-900 md:mb-20 md:text-3xl"
           >
             でも、いざ自習しようとしても、
             <br />
             こんな
-            <span className="text-blue-600">「3つの壁」</span>
+            <span className="text-amber-700">「3つの壁」</span>
             にぶつかっていませんか？
           </motion.h2>
 
           <motion.div
-            className="flex flex-col gap-5"
+            className="flex flex-col gap-6"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -802,18 +799,18 @@ export default function Home() {
               <motion.div
                 key={card.title}
                 variants={itemVariants}
-                className="rounded-2xl border-2 border-blue-500 bg-white px-6 py-6 md:px-8 md:py-7"
+                className="border border-slate-300 bg-white px-6 py-7 md:px-9 md:py-8"
               >
-                <div className="flex items-center justify-center gap-2">
-                  <card.icon className="h-5 w-5 text-blue-600" />
-                  <h3 className="text-lg font-bold text-blue-600 md:text-xl">
+                <div className="flex items-center justify-center gap-2.5">
+                  <card.icon className="h-5 w-5 text-slate-700" />
+                  <h3 className="font-serif text-lg font-semibold text-slate-800 md:text-xl">
                     {card.title}
                   </h3>
                 </div>
-                <ul className="mt-4 space-y-2">
+                <ul className="mt-5 space-y-2.5">
                   {card.items.map((item) => (
-                    <li key={item} className="flex gap-2 text-sm leading-relaxed text-gray-800 md:text-base">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400" />
+                    <li key={item} className="flex gap-2 text-sm font-light leading-relaxed text-slate-700 md:text-base">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" />
                       {item}
                     </li>
                   ))}
@@ -825,11 +822,11 @@ export default function Home() {
       </section>
 
       {/* ===== ③ 選ばれる理由 ===== */}
-      <section id="reasons" className="bg-gray-50 py-20 md:py-28">
+      <section id="reasons" className="bg-white py-28 md:py-40">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <motion.div {...fadeUp} className="text-center">
             <SectionLabel center>解決策</SectionLabel>
-            <h2 className="text-2xl font-bold text-gray-900 md:text-3xl lg:text-4xl">
+            <h2 className="font-serif text-2xl font-semibold text-slate-900 md:text-3xl lg:text-4xl">
               だからこそ、難関大志望者は
               <br className="hidden sm:inline" />
               「Study Ops」を選びます。
@@ -837,7 +834,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="mt-14 grid gap-6 md:grid-cols-3"
+            className="mt-20 grid gap-8 md:grid-cols-3"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -847,7 +844,7 @@ export default function Home() {
               <motion.div
                 key={s.title}
                 variants={itemVariants}
-                className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md"
+                className="group overflow-hidden border border-slate-200 bg-white transition-shadow hover:shadow-sm"
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden">
                   <Image
@@ -857,14 +854,14 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <span className="text-xs font-bold text-blue-600">
+                <div className="p-7">
+                  <span className="text-xs font-medium tracking-widest text-amber-700">
                     0{i + 1}
                   </span>
-                  <h3 className="mt-2 text-lg font-bold text-gray-900">
+                  <h3 className="mt-3 font-serif text-lg font-semibold text-slate-900">
                     {s.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                  <p className="mt-4 text-sm font-light leading-loose text-slate-600">
                     {s.desc}
                   </p>
                 </div>
@@ -875,38 +872,38 @@ export default function Home() {
       </section>
 
       {/* ===== ④ コース紹介 ===== */}
-      <section id="courses" className="bg-white py-20 md:py-28">
+      <section id="courses" className="bg-stone-50 py-28 md:py-40">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <motion.div {...fadeUp} className="text-center">
             <SectionLabel center>コース紹介</SectionLabel>
           </motion.div>
 
           <motion.div
-            className="mt-14"
+            className="mt-20"
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VP}
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" as const }}
           >
-            <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+            <div className="overflow-x-auto border border-slate-200">
               <table className="w-full min-w-[640px] border-collapse text-sm">
                 <thead>
                   <tr>
-                    <th className="border-b border-gray-200 bg-gray-50 px-5 py-4 text-left font-semibold text-gray-700 md:w-[34%]">
+                    <th className="border-b border-slate-200 bg-slate-50 px-6 py-5 text-left font-medium text-slate-700 md:w-[34%]">
                       比較・機能項目
                     </th>
-                    <th className="border-b border-l border-gray-200 bg-blue-600 px-5 py-4 text-center font-bold text-white md:w-[33%]">
+                    <th className="border-b border-l border-slate-200 bg-slate-900 px-6 py-5 text-center font-medium tracking-wide text-white md:w-[33%]">
                       <span>Standardプラン</span>
-                      <span className="ml-1.5 inline-block rounded-full bg-yellow-400 px-2 py-0.5 text-[10px] font-bold leading-none text-yellow-900">
+                      <span className="ml-2 inline-block border border-amber-400/60 bg-amber-50 px-2 py-0.5 text-[10px] font-medium leading-none text-amber-800">
                         人気
                       </span>
                     </th>
-                    <th className="border-b border-l border-gray-200 bg-blue-800 px-5 py-4 text-center font-bold text-white md:w-[33%]">
+                    <th className="border-b border-l border-slate-200 bg-slate-800 px-6 py-5 text-center font-medium tracking-wide text-white md:w-[33%]">
                       Proプラン
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-100">
+                <tbody className="divide-y divide-slate-100">
                   {[
                     { label: "常時監視", std: true, pro: true },
                     { label: "質問し放題チャット", std: true, pro: true },
@@ -916,19 +913,19 @@ export default function Home() {
                     { label: "専用ルート設計", std: false, pro: true },
                     { label: "月２回の面談", std: false, pro: true },
                   ].map((row) => (
-                    <tr key={row.label} className="transition-colors hover:bg-gray-50/60">
-                      <td className="px-5 py-4 font-medium text-gray-900">
+                    <tr key={row.label} className="transition-colors hover:bg-slate-50/60">
+                      <td className="px-6 py-5 font-normal text-slate-800">
                         {row.label}
                       </td>
-                      <td className="border-l border-gray-100 px-5 py-4 text-center">
+                      <td className="border-l border-slate-100 px-6 py-5 text-center">
                         {row.std
-                          ? <Circle className="mx-auto h-7 w-7 text-blue-600 md:h-8 md:w-8" strokeWidth={3.5} />
-                          : <X className="mx-auto h-7 w-7 text-gray-300 md:h-8 md:w-8" strokeWidth={2.5} />}
+                          ? <Circle className="mx-auto h-7 w-7 text-slate-800 md:h-8 md:w-8" strokeWidth={3} />
+                          : <X className="mx-auto h-7 w-7 text-slate-300 md:h-8 md:w-8" strokeWidth={2} />}
                       </td>
-                      <td className="border-l border-gray-100 px-5 py-4 text-center">
+                      <td className="border-l border-slate-100 px-6 py-5 text-center">
                         {row.pro
-                          ? <Circle className="mx-auto h-7 w-7 text-blue-600 md:h-8 md:w-8" strokeWidth={3.5} />
-                          : <X className="mx-auto h-7 w-7 text-gray-300 md:h-8 md:w-8" strokeWidth={2.5} />}
+                          ? <Circle className="mx-auto h-7 w-7 text-slate-800 md:h-8 md:w-8" strokeWidth={3} />
+                          : <X className="mx-auto h-7 w-7 text-slate-300 md:h-8 md:w-8" strokeWidth={2} />}
                       </td>
                     </tr>
                   ))}
@@ -936,20 +933,20 @@ export default function Home() {
               </table>
             </div>
 
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
               <Link
                 href="/courses/standard"
-                className="group flex items-center justify-between rounded-xl border border-gray-200 bg-white px-6 py-5 text-sm font-semibold text-blue-600 shadow-sm transition-all hover:border-blue-200 hover:bg-blue-50 hover:shadow-md"
+                className="group flex items-center justify-between border border-slate-300 bg-white px-6 py-5 text-sm font-medium text-slate-800 transition-all hover:border-slate-400 hover:bg-slate-50"
               >
                 Standardコースの詳細を見る
-                <ChevronRight className="h-5 w-5 shrink-0 text-blue-600 transition-transform group-hover:translate-x-1" />
+                <ChevronRight className="h-5 w-5 shrink-0 text-slate-600 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/courses/pro"
-                className="group flex items-center justify-between rounded-xl border border-gray-200 bg-white px-6 py-5 text-sm font-semibold text-blue-600 shadow-sm transition-all hover:border-blue-200 hover:bg-blue-50 hover:shadow-md"
+                className="group flex items-center justify-between border border-slate-300 bg-white px-6 py-5 text-sm font-medium text-slate-800 transition-all hover:border-slate-400 hover:bg-slate-50"
               >
                 Proコースの詳細を見る
-                <ChevronRight className="h-5 w-5 shrink-0 text-blue-600 transition-transform group-hover:translate-x-1" />
+                <ChevronRight className="h-5 w-5 shrink-0 text-slate-600 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </motion.div>
@@ -960,13 +957,13 @@ export default function Home() {
       <TestimonialsCarousel />
 
       {/* ===== ⑥ FAQ ===== */}
-      <section id="faq" className="bg-white py-20 md:py-28">
+      <section id="faq" className="bg-white py-28 md:py-40">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <motion.div {...fadeUp}>
             <SectionLabel>よくある質問</SectionLabel>
           </motion.div>
 
-          <div className="mt-12 space-y-8">
+          <div className="mt-16 space-y-10">
             {faqCategories.map((cat, i) => (
               <motion.div
                 key={cat.title}
@@ -987,17 +984,17 @@ export default function Home() {
       </section>
 
       {/* ===== ⑦ お知らせ ===== */}
-      <section id="news" className="bg-gray-50 py-20 md:py-28">
+      <section id="news" className="bg-stone-50 py-28 md:py-40">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <motion.div {...fadeUp}>
             <SectionLabel>お知らせ</SectionLabel>
-            <h2 className="mt-4 text-2xl font-bold text-gray-900 md:text-3xl lg:text-4xl">
+            <h2 className="mt-5 font-serif text-2xl font-semibold text-slate-900 md:text-3xl lg:text-4xl">
               新着情報・キャンペーン
             </h2>
           </motion.div>
 
           <motion.div
-            className="mt-12 flex justify-center"
+            className="mt-16 flex justify-center"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -1011,19 +1008,19 @@ export default function Home() {
               >
                 <Link
                   href={item.href}
-                  className="group block overflow-hidden rounded-2xl bg-white shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md"
+                  className="group block overflow-hidden border border-slate-200 bg-white transition-transform hover:-translate-y-0.5 hover:shadow-sm"
                 >
                   <div
-                    className="h-48 bg-gray-200 bg-cover bg-center"
+                    className="h-48 bg-slate-100 bg-cover bg-center"
                     style={item.image ? { backgroundImage: `url(${item.image})` } : undefined}
                   />
-                  <div className="p-6">
-                    <h3 className="line-clamp-2 text-lg font-bold text-gray-900">
+                  <div className="p-7">
+                    <h3 className="line-clamp-2 font-serif text-lg font-semibold text-slate-900">
                       {item.title}
                     </h3>
-                    <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
+                    <div className="mt-5 flex items-center justify-between text-sm text-slate-500">
                       <time>{item.date}</time>
-                      <span className="rounded-full bg-blue-50 px-3 py-0.5 text-xs font-semibold text-blue-600">
+                      <span className="border border-slate-200 px-3 py-0.5 text-xs font-medium text-slate-600">
                         {item.category}
                       </span>
                     </div>
@@ -1037,41 +1034,41 @@ export default function Home() {
       </section>
 
       {/* ===== ⑧ 下部CTA ===== */}
-      <section id="cta" className="bg-white py-20 md:py-28">
+      <section id="cta" className="bg-white py-28 md:py-40">
         <div className="mx-auto max-w-5xl px-4 md:px-8">
           <motion.div
             {...fadeUp}
-            className="overflow-hidden rounded-3xl bg-white p-8 shadow-sm md:p-12"
+            className="overflow-hidden border border-slate-200 bg-white p-10 md:p-16"
           >
-            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
               <div>
-                <span className="inline-block rounded-full bg-blue-50 px-4 py-1.5 text-xs font-semibold text-blue-600">
-                  入会キャンペーン実施中！
+                <span className="inline-block border border-amber-600/40 bg-amber-50/60 px-4 py-1.5 text-xs font-medium tracking-wide text-amber-800">
+                  入会キャンペーン実施中
                 </span>
-                <h2 className="mt-4 text-2xl font-bold text-gray-900 md:text-3xl">
+                <h2 className="mt-5 font-serif text-2xl font-semibold text-slate-900 md:text-3xl">
                   無料体験入会はこちら
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                <p className="mt-4 text-sm font-light leading-loose text-slate-600">
                   まずは無料体験で、オンライン自習室の集中できる環境を実感してください。クレジットカード不要、メールアドレスのみで始められます。
                 </p>
                 <motion.a
                   href="/apply"
-                  className="mt-6 inline-flex items-center whitespace-nowrap rounded-lg bg-blue-600 px-6 py-3.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-blue-700 md:px-8 md:text-sm"
-                  whileHover={{ scale: 1.02 }}
+                  className="mt-8 inline-flex items-center whitespace-nowrap border border-slate-900 bg-slate-900 px-6 py-3.5 text-xs font-medium tracking-wide text-white transition-colors hover:bg-slate-800 md:px-8 md:text-sm"
+                  whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   まずは7日間 無料トライアル
                 </motion.a>
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-4">
                 {ctaSubLinks.map((l) =>
                   l.isDrawer ? (
                     <button
                       key={l.label}
                       type="button"
                       onClick={() => setDrawerOpen(true)}
-                      className="flex items-center justify-center rounded-xl border border-gray-200 bg-gray-50 px-4 py-5 text-center text-sm font-semibold text-gray-700 transition-colors hover:border-blue-600 hover:text-blue-600"
+                      className="flex items-center justify-center border border-slate-200 bg-slate-50 px-4 py-5 text-center text-sm font-normal text-slate-700 transition-colors hover:border-slate-400 hover:text-slate-900"
                     >
                       {l.label}
                     </button>
@@ -1082,7 +1079,7 @@ export default function Home() {
                       {...("external" in l && l.external
                         ? { target: "_blank", rel: "noopener noreferrer" }
                         : {})}
-                      className="flex items-center justify-center rounded-xl border border-gray-200 bg-gray-50 px-4 py-5 text-center text-sm font-semibold text-gray-700 transition-colors hover:border-blue-600 hover:text-blue-600"
+                      className="flex items-center justify-center border border-slate-200 bg-slate-50 px-4 py-5 text-center text-sm font-normal text-slate-700 transition-colors hover:border-slate-400 hover:text-slate-900"
                     >
                       {l.label}
                     </a>
@@ -1100,21 +1097,21 @@ export default function Home() {
         onClose={() => setDrawerOpen(false)}
       />
 
-      {/* ===== ⑧ フッター ===== */}
-      <footer className="border-t border-gray-100 bg-white py-10 pb-28 md:pb-10">
+      {/* ===== フッター ===== */}
+      <footer className="border-t border-slate-200 bg-stone-50 py-12 pb-28 md:pb-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 md:flex-row md:px-8">
-          <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/privacy" className="text-gray-500 transition-colors hover:text-gray-900">
+          <nav className="flex flex-wrap justify-center gap-8 text-sm">
+            <Link href="/privacy" className="text-slate-500 transition-colors hover:text-slate-800">
               プライバシーポリシー
             </Link>
-            <Link href="/terms" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/terms" className="text-slate-500 transition-colors hover:text-slate-800">
               利用規約
             </Link>
-            <Link href="/disclaimer" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/disclaimer" className="text-slate-500 transition-colors hover:text-slate-800">
               免責事項
             </Link>
           </nav>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-slate-400">
             © {new Date().getFullYear()} Study Ops. All rights reserved.
           </p>
         </div>

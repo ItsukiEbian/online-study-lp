@@ -7,13 +7,13 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-gray-50 text-gray-900">
+    <div className="flex min-h-screen flex-col bg-stone-50 text-slate-900">
       {/* ヘッダー */}
-      <header className="border-b border-gray-100 bg-white">
+      <header className="border-b border-slate-200 bg-stone-50">
         <div className="mx-auto flex h-16 max-w-5xl items-center px-6 md:px-10">
           <Link
             href="/"
-            className="text-lg font-bold text-gray-900 transition-colors hover:text-blue-600"
+            className="text-lg font-serif font-semibold tracking-wide text-slate-900 transition-colors hover:text-amber-700"
           >
             Study Ops
           </Link>
@@ -22,50 +22,50 @@ export default function PrivacyPage() {
 
       {/* 本文 */}
       <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-12 md:px-10 md:py-16">
-        <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">
+        <h1 className="text-2xl font-serif font-semibold text-slate-900 md:text-3xl">
           プライバシーポリシー
         </h1>
-        <p className="mt-2 text-sm text-gray-500">2026年2月9日 制定</p>
+        <p className="mt-2 text-sm text-slate-500">2026年2月9日 制定</p>
 
-        <div className="mt-10 space-y-8 leading-relaxed text-gray-700">
+        <div className="mt-10 space-y-8 font-light leading-relaxed text-slate-700">
           <p>
             当社は、「個人情報の保護に関する法律」（以下、「法」といいます）に基づき、個人情報の適切な保護と利用に関する個人情報保護方針を制定し、公表いたします。
           </p>
 
           {/* 個人情報保護方針 */}
           <section>
-            <h2 className="mb-4 text-lg font-bold text-gray-900">個人情報保護方針</h2>
+            <h2 className="mb-4 text-lg font-serif font-semibold text-slate-900">個人情報保護方針</h2>
             <ol className="list-none space-y-3 pl-0">
               <li>
-                <span className="font-bold text-gray-900">1.</span>{" "}
+                <span className="font-semibold text-slate-900">1.</span>{" "}
                 当社は、個人情報の適切な保護と利用に関し、関連法令等に加えて、本方針に定めた事項を遵守し、お客さまの個人情報の適切な保護と利用に努めるとともに、情報化の進展に適切に対応するため、当社における個人情報保護の管理体制およびその取組みについて、継続的な改善に努めます。
               </li>
               <li>
-                <span className="font-bold text-gray-900">2.</span>{" "}
+                <span className="font-semibold text-slate-900">2.</span>{" "}
                 当社は、お客さまの個人情報について、利用目的を特定するとともに、法で定める場合等を除き、その利用目的の達成に必要な範囲内において利用いたします。
               </li>
               <li>
-                <span className="font-bold text-gray-900">3.</span>{" "}
+                <span className="font-semibold text-slate-900">3.</span>{" "}
                 当社では、前記2で特定した利用目的の達成に必要な範囲で、適正かつ適法な手段により、お客さまの個人情報を取得いたします。
               </li>
               <li>
-                <span className="font-bold text-gray-900">4.</span>{" "}
+                <span className="font-semibold text-slate-900">4.</span>{" "}
                 当社は、法に定める場合を除き、あらかじめご本人の同意を得ることなく、お客さまの個人情報を第三者に提供することはいたしません。
               </li>
               <li>
-                <span className="font-bold text-gray-900">5.</span>{" "}
+                <span className="font-semibold text-slate-900">5.</span>{" "}
                 当社は、お客さまの個人情報に関し、情報の紛失・改ざんおよび漏えい等の防止のため、適切な安全管理措置を実施いたします。また、お客さまの個人情報を取扱う全ての役職員に対し、個人情報保護の重要性についての教育を行うとともに、お客さまの個人情報を委託する場合には、委託先について適切に監督いたします。
               </li>
               <li>
-                <span className="font-bold text-gray-900">6.</span>{" "}
+                <span className="font-semibold text-slate-900">6.</span>{" "}
                 当社は、保有個人データ（開示、内容の訂正等の権限を有する個人データであって、その存否が明らかになることにより公益その他の利益が害されるものとして政令で定めるもの、または6ヶ月以内に消去することとなるもの以外のものをいいます）につき、法令に基づきご本人からの開示、訂正等に応じます。当社の個人情報の取扱いにつきまして、ご意見・ご質問がございましたら、当社の個人情報相談窓口にて対応させて頂きます。
               </li>
               <li>
-                <span className="font-bold text-gray-900">7.</span>{" "}
+                <span className="font-semibold text-slate-900">7.</span>{" "}
                 当社は、取り扱う個人情報につき、ご本人からの苦情に対し迅速かつ適切に取り組み、そのための社内体制の整備に努めます。
               </li>
               <li>
-                <span className="font-bold text-gray-900">8.</span>{" "}
+                <span className="font-semibold text-slate-900">8.</span>{" "}
                 当社は本方針の内容を継続的に見直し、その改善に努めます。
               </li>
             </ol>
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
 
           {/* 個人情報保護法に基づく公表文 */}
           <section>
-            <h2 className="mb-4 text-lg font-bold text-gray-900">
+            <h2 className="mb-4 text-lg font-serif font-semibold text-slate-900">
               個人情報保護法に基づく公表文
             </h2>
             <p>
@@ -83,17 +83,17 @@ export default function PrivacyPage() {
 
           {/* 公表事項 */}
           <section>
-            <h2 className="mb-4 text-lg font-bold text-gray-900">公表事項</h2>
+            <h2 className="mb-4 text-lg font-serif font-semibold text-slate-900">公表事項</h2>
 
             {/* 1. 利用目的 */}
-            <h3 className="mb-3 font-bold text-gray-900">
+            <h3 className="mb-3 font-serif font-semibold text-slate-900">
               1. 個人情報の利用目的について
             </h3>
             <p className="mb-3">
               当社は、個人情報の保護に関する法律（平成15年5月30日法律第57号）に基づき、お客さまの個人情報を、下記業務ならびに利用目的の達成に必要な範囲で利用いたします。
             </p>
 
-            <p className="mb-2 font-bold text-gray-900">＜業務内容＞</p>
+            <p className="mb-2 font-semibold text-slate-900">＜業務内容＞</p>
             <ol className="mb-4 list-decimal space-y-1 pl-6">
               <li>オンライン個別指導</li>
               <li>受験コンサルティング</li>
@@ -102,7 +102,7 @@ export default function PrivacyPage() {
               <li>その他、上記各項に関連し、または附帯する事業</li>
             </ol>
 
-            <p className="mb-2 font-bold text-gray-900">＜利用目的＞</p>
+            <p className="mb-2 font-semibold text-slate-900">＜利用目的＞</p>
             <ol className="mb-8 list-decimal space-y-1 pl-6">
               <li>各種商品の申込受付のため</li>
               <li>本人確認法に基づくご本人さまの確認等や、商品やサービスをご利用いただく資格等の確認のため</li>
@@ -116,7 +116,7 @@ export default function PrivacyPage() {
             </ol>
 
             {/* 2. 正確性の確保 */}
-            <h3 className="mb-3 font-bold text-gray-900">
+            <h3 className="mb-3 font-serif font-semibold text-slate-900">
               2. 個人データの正確性の確保について
             </h3>
             <p className="mb-8">
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
             </p>
 
             {/* 3. 共同利用 */}
-            <h3 className="mb-3 font-bold text-gray-900">
+            <h3 className="mb-3 font-serif font-semibold text-slate-900">
               3. 個人情報の共同利用について
             </h3>
             <p className="mb-3">
@@ -155,7 +155,7 @@ export default function PrivacyPage() {
             </ol>
 
             {/* 4. 開示請求 */}
-            <h3 className="mb-3 mt-8 font-bold text-gray-900">
+            <h3 className="mb-3 mt-8 font-serif font-semibold text-slate-900">
               4. 開示請求等手続きについて
             </h3>
             <p className="mb-3">
@@ -163,17 +163,17 @@ export default function PrivacyPage() {
             </p>
             <ol className="list-decimal space-y-3 pl-6">
               <li>
-                <span className="font-bold text-gray-900">開示請求等手続きの対象となる保有個人データの項目</span>
+                <span className="font-semibold text-slate-900">開示請求等手続きの対象となる保有個人データの項目</span>
                 <br />
                 氏名、住所、電話番号、生年月日、勤務先（勤務先名または職業・電話番号）、取引の履歴に関する情報等
               </li>
               <li>
-                <span className="font-bold text-gray-900">開示請求等手続きの受付窓口</span>
+                <span className="font-semibold text-slate-900">開示請求等手続きの受付窓口</span>
                 <br />
                 受付窓口URL：（準備中）
               </li>
               <li>
-                <span className="font-bold text-gray-900">ご提出いただくもの</span>
+                <span className="font-semibold text-slate-900">ご提出いただくもの</span>
                 <ul className="mt-2 list-disc space-y-1 pl-6">
                   <li>個人情報開示依頼書</li>
                   <li>本人確認のための書類（運転免許証やパスポート等の写し1点）</li>
@@ -181,7 +181,7 @@ export default function PrivacyPage() {
                 </ul>
               </li>
               <li>
-                <span className="font-bold text-gray-900">手数料</span>
+                <span className="font-semibold text-slate-900">手数料</span>
                 <br />
                 法第25条に基づく開示請求の場合は、当社が下記に定める手数料をいただきます。
                 <ul className="mt-2 list-disc space-y-1 pl-6">
@@ -190,17 +190,17 @@ export default function PrivacyPage() {
                 </ul>
               </li>
               <li>
-                <span className="font-bold text-gray-900">回答方法</span>
+                <span className="font-semibold text-slate-900">回答方法</span>
                 <br />
                 ご本人よりお届けいただいた住所宛てにご郵送する方法で遅滞なく書面にて回答いたします。なお、代理人によるご依頼の場合であっても、ご本人に直接回答することがございますので、予めご了承願います。
               </li>
               <li>
-                <span className="font-bold text-gray-900">開示請求等手続きに関して</span>
+                <span className="font-semibold text-slate-900">開示請求等手続きに関して</span>
                 <br />
                 取得した個人情報の利用目的：開示請求等手続きにより当社が取得した個人情報は、当該手続きのための調査、ご本人ならびに代理人の本人確認、および当該開示請求等に対する回答に利用いたします。
               </li>
               <li>
-                <span className="font-bold text-gray-900">開示しない場合のお取扱いについて</span>
+                <span className="font-semibold text-slate-900">開示しない場合のお取扱いについて</span>
                 <br />
                 次に定める場合は、開示いたしかねますので、予めご了承願います。開示しないことを決定した場合は、その旨理由を付して通知申し上げます。
                 <ol className="mt-2 list-decimal space-y-1 pl-6">
@@ -214,14 +214,14 @@ export default function PrivacyPage() {
                 </ol>
               </li>
               <li>
-                <span className="font-bold text-gray-900">その他お問い合わせについて</span>
+                <span className="font-semibold text-slate-900">その他お問い合わせについて</span>
                 <br />
                 当社の個人情報に関するお問い合わせ、苦情等につきましては、下記窓口までお願い致します。
               </li>
             </ol>
 
             {/* 5. Cookie */}
-            <h3 className="mb-3 mt-8 font-bold text-gray-900">
+            <h3 className="mb-3 mt-8 font-serif font-semibold text-slate-900">
               5. クッキー（Cookie）について
             </h3>
             <p>
@@ -232,10 +232,10 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <p className="pt-6 text-center font-bold text-gray-900">以上</p>
+          <p className="pt-6 text-center font-semibold text-slate-900">以上</p>
 
           <div className="mt-16 text-center">
-            <Link href="/" className="text-gray-600 underline transition-colors hover:text-gray-900">
+            <Link href="/" className="text-slate-600 underline transition-colors hover:text-slate-800">
               ホームへ戻る
             </Link>
           </div>
@@ -243,20 +243,20 @@ export default function PrivacyPage() {
       </main>
 
       {/* フッター */}
-      <footer className="mt-auto border-t border-gray-100 bg-white py-10">
+      <footer className="mt-auto border-t border-slate-200 bg-stone-50 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 md:flex-row md:px-8">
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/privacy" className="font-medium text-blue-600">
+            <Link href="/privacy" className="font-medium text-amber-700">
               プライバシーポリシー
             </Link>
-            <Link href="/terms" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/terms" className="text-slate-500 transition-colors hover:text-slate-800">
               利用規約
             </Link>
-            <Link href="/disclaimer" className="text-gray-500 transition-colors hover:text-gray-900">
+            <Link href="/disclaimer" className="text-slate-500 transition-colors hover:text-slate-800">
               免責事項
             </Link>
           </nav>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-slate-400">
             © {new Date().getFullYear()} Study Ops. All rights reserved.
           </p>
         </div>
