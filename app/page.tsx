@@ -349,17 +349,17 @@ const strengths = [
   {
     title: "スマホのカメラで「見られる」ことによる圧倒的な集中力",
     desc: "最大の敵だったスマホを、あなたを監視する「目」に変えます。全国のライバルや管理者の存在を感じる適度な緊張感が、極限の集中空間を叩き出します。",
-    image: "/HP_Img01ver02.jpg",
+    image: "/HP_Img04.jpg",
   },
   {
     title: "24時間365日、いつでもそこがあなたの自習室",
     desc: "深夜でも、早朝でも、モチベーションが上がったその瞬間にすぐアクセス可能。「自習室が閉まっているから」という言い訳はもう通用しません。",
-    image: "/HP_Img02ver02.jpg",
+    image: "/HP_Img02.jpg",
   },
   {
     title: "難関大を突破した現役医学部生にいつでも質問できる",
     desc: "「わからない」で手が止まる時間をゼロに。厳しい受験を勝ち抜いた現役医学部生が常に待機しており、疑問をその場で解消できます。",
-    image: "/HP_Img03ver02.jpg",
+    image: "/HP_Img03.jpg",
   },
 ];
 
@@ -846,11 +846,10 @@ export default function Home() {
                 className="group overflow-hidden border border-slate-200 bg-white transition-shadow hover:shadow-sm"
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden">
-                  <Image
+                  <img
                     src={s.image}
                     alt={s.title}
-                    fill
-                    className="object-cover"
+                    className="h-full w-full object-cover"
                   />
                 </div>
                 <div className="p-7">
