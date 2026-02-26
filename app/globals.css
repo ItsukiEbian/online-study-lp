@@ -1,22 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #F9F8F4;
-  --color-ink: #2C3448;
-  --color-accent: #1A2238;
-  --color-navy: #1A2238;
-  --color-gold: #C5A059;
-  --color-card: #FEFDFB;
+  --color-surface: #f8fafc;
+  --color-ink: #0f172a;
+  --color-accent: #1a233a;
+  --color-navy: #1a233a;
+  --color-gold: #d8ceb9;
+  --color-card: #ffffff;
 
-  /* Override Tailwind defaults to match the new Premium Theme universally */
-  --color-stone-50: #F9F8F4;
-  /* Background */
-  --color-slate-900: #1A2238;
-  /* Primary Main */
-  --color-slate-800: #2C3448;
-  /* Hover Main & Text Primary */
-  --color-amber-700: #C5A059;
-  /* Accent */
+  /* Override Tailwind defaults — Elite Prep School Theme */
+  --color-stone-50: #f8fafc;
+  /* Background → cool slate-50 */
+  --color-slate-50: #f8fafc;
+  /* Subtle bg */
+  --color-slate-900: #0f172a;
+  /* Primary deep navy */
+  --color-slate-800: #1e293b;
+  /* Hover navy */
+  --color-amber-700: #a39274;
+  /* Accent → sand/ash brown (muted) */
+  --color-amber-800: #8b7a5e;
+  /* Darker accent text */
+  --color-amber-600: #a39274;
+  /* Badge border accent */
+  --color-amber-50: #f5f0e8;
+  /* Badge bg accent (warm sand tint) */
 
   --font-sans: var(--font-sans-jp), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-serif-jp), "游明朝", "Yu Mincho", "筑紫明朝", serif;
@@ -28,7 +36,7 @@
   }
 
   body {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     color: var(--color-ink);
     background-color: var(--color-surface);
   }

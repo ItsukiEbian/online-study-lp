@@ -50,7 +50,7 @@ export default function DocumentRequestDrawer({
             <div className="flex-1 overflow-y-auto">
               {state.succeeded ? (
                 <div className="flex h-full flex-col items-center justify-center px-6 text-center">
-                  <h3 className="font-serif text-2xl font-semibold text-slate-900">
+                  <h3 className="text-2xl font-bold text-slate-900">
                     資料請求ありがとうございました
                   </h3>
                   <p className="mt-6 font-light leading-loose text-slate-600">
@@ -69,7 +69,7 @@ export default function DocumentRequestDrawer({
               ) : (
                 <>
                   <div className="border-b border-slate-200 px-8 pb-6">
-                    <h2 className="text-center font-serif text-2xl font-semibold text-slate-900">
+                    <h2 className="text-center text-2xl font-bold text-slate-900">
                       資料請求フォーム
                     </h2>
                     <p className="mt-4 text-sm font-light leading-relaxed text-slate-600">

@@ -20,7 +20,7 @@ export default function EnglishCoursePage() {
       {/* ヘッダー */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/60 bg-stone-50/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-          <Link href="/" className="font-serif text-lg font-semibold tracking-wide text-slate-900">
+          <Link href="/" className="text-lg font-bold tracking-wide text-slate-900">
             Study Ops
           </Link>
           <div className="flex items-center gap-4">
@@ -67,7 +67,7 @@ export default function EnglishCoursePage() {
                   コース詳細
                 </span>
               </div>
-              <h1 className="font-serif text-2xl font-semibold text-slate-900 md:text-3xl lg:text-4xl">
+              <h1 className="text-2xl font-bold text-slate-900 md:text-3xl lg:text-4xl">
                 英語4技能 / 英検対策
               </h1>
               <p className="mt-4 font-light leading-loose text-slate-700">
@@ -82,7 +82,7 @@ export default function EnglishCoursePage() {
             >
               {/* コース概要 */}
               <section className="mb-10">
-                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900">
+                <h2 className="mb-4 text-xl font-bold text-slate-900">
                   コース概要
                 </h2>
                 <p className="font-light leading-loose text-slate-700">
@@ -92,7 +92,7 @@ export default function EnglishCoursePage() {
 
               {/* 対象学年 */}
               <motion.section {...fadeUp(0.15)} className="mb-10">
-                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900">
+                <h2 className="mb-4 text-xl font-bold text-slate-900">
                   対象学年
                 </h2>
                 <ul className="space-y-2">
@@ -115,7 +115,7 @@ export default function EnglishCoursePage() {
 
               {/* 指導内容 */}
               <motion.section {...fadeUp(0.2)} className="mb-10">
-                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900">
+                <h2 className="mb-4 text-xl font-bold text-slate-900">
                   指導内容
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -141,7 +141,7 @@ export default function EnglishCoursePage() {
                       key={s.subject}
                       className="border border-slate-200 bg-stone-50 p-5"
                     >
-                      <h3 className="font-serif font-semibold text-slate-900">{s.subject}</h3>
+                      <h3 className="font-bold text-slate-900">{s.subject}</h3>
                       <p className="mt-1 text-sm font-light text-slate-700">{s.details}</p>
                     </div>
                   ))}
@@ -150,7 +150,7 @@ export default function EnglishCoursePage() {
 
               {/* 指導方針 */}
               <motion.section {...fadeUp(0.25)} className="mb-10">
-                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900">
+                <h2 className="mb-4 text-xl font-bold text-slate-900">
                   指導方針
                 </h2>
                 <div className="space-y-3 font-light leading-loose text-slate-700">
@@ -165,12 +165,12 @@ export default function EnglishCoursePage() {
 
               {/* 対応資格・検定 */}
               <motion.section {...fadeUp(0.3)}>
-                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900">
+                <h2 className="mb-4 text-xl font-bold text-slate-900">
                   対応資格・検定
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <h3 className="mb-3 font-serif font-semibold text-slate-900">英検</h3>
+                    <h3 className="mb-3 font-bold text-slate-900">英検</h3>
                     <ul className="space-y-2 text-sm font-light text-slate-700">
                       {[
                         "英検5級〜1級",
@@ -185,7 +185,7 @@ export default function EnglishCoursePage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="mb-3 font-serif font-semibold text-slate-900">その他</h3>
+                    <h3 className="mb-3 font-bold text-slate-900">その他</h3>
                     <ul className="space-y-2 text-sm font-light text-slate-700">
                       {[
                         "TOEIC L&R / S&W",

@@ -77,7 +77,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-slate-200 text-slate-400">
           {open ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
         </span>
-        <span className="font-serif text-base font-semibold text-slate-800 md:text-lg">
+        <span className="text-base font-bold text-slate-800 md:text-lg">
           {q}
         </span>
       </button>
@@ -110,7 +110,7 @@ function FAQCategoryAccordion({
         onClick={() => setOpen(!open)}
         className="flex w-full cursor-pointer items-center justify-between border-b border-slate-300 pb-3 text-left transition-colors hover:text-amber-700"
       >
-        <h3 className="font-serif text-xl font-semibold text-slate-800">【{title}】</h3>
+        <h3 className="text-xl font-bold text-slate-800">【{title}】</h3>
         <ChevronRight
           className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-300 ${
             open ? "rotate-90" : ""
@@ -289,7 +289,7 @@ function TestimonialsCarousel() {
                           {t.badge}
                         </span>
                       </div>
-                      <h3 className="mt-5 font-serif text-lg font-semibold leading-snug text-slate-900">
+                      <h3 className="mt-5 text-lg font-bold leading-snug text-slate-900">
                         &ldquo;{t.summary}&rdquo;
                       </h3>
                       <p className="mt-5 text-sm leading-loose text-slate-600">
@@ -465,7 +465,7 @@ export default function Home() {
       {/* ===== ① ヘッダー ===== */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-stone-50/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-          <Link href="/" className="font-serif text-lg font-semibold tracking-wide text-slate-900">
+          <Link href="/" className="text-lg font-bold tracking-wide text-slate-900">
             Study Ops
           </Link>
 
@@ -536,7 +536,7 @@ export default function Home() {
                   <a
                     href="#"
                     onClick={() => { setMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                    className="font-serif text-2xl font-semibold text-slate-900"
+                    className="text-2xl font-bold text-slate-900"
                   >
                     ホーム
                   </a>
@@ -545,13 +545,13 @@ export default function Home() {
                   <a
                     href="#reasons"
                     onClick={() => setMenuOpen(false)}
-                    className="font-serif text-2xl font-semibold text-slate-900"
+                    className="text-2xl font-bold text-slate-900"
                   >
                     選ばれる理由
                   </a>
                 </li>
                 <li>
-                  <span className="font-serif text-2xl font-semibold text-slate-900">コース紹介</span>
+                  <span className="text-2xl font-bold text-slate-900">コース紹介</span>
                   <div className="mt-4 flex gap-6">
                     <Link
                       href="/courses/standard"
@@ -579,7 +579,7 @@ export default function Home() {
                   <a
                     href="#voices"
                     onClick={() => setMenuOpen(false)}
-                    className="font-serif text-2xl font-semibold text-slate-900"
+                    className="text-2xl font-bold text-slate-900"
                   >
                     生徒さんの声
                   </a>
@@ -588,7 +588,7 @@ export default function Home() {
                   <a
                     href="#faq"
                     onClick={() => setMenuOpen(false)}
-                    className="font-serif text-2xl font-semibold text-slate-900"
+                    className="text-2xl font-bold text-slate-900"
                   >
                     よくある質問
                   </a>
@@ -597,7 +597,7 @@ export default function Home() {
                   <a
                     href="#news"
                     onClick={() => setMenuOpen(false)}
-                    className="font-serif text-2xl font-semibold text-slate-900"
+                    className="text-2xl font-bold text-slate-900"
                   >
                     お知らせ・キャンペーン
                   </a>
@@ -655,7 +655,7 @@ export default function Home() {
               今だけ入学キャンペーン実施中
             </span>
 
-            <h1 className="mt-8 whitespace-nowrap font-serif text-xl font-semibold leading-relaxed tracking-wide text-slate-900 sm:text-2xl md:text-4xl lg:text-5xl">
+            <h1 className="mt-8 whitespace-nowrap text-xl font-bold leading-relaxed tracking-wide text-slate-900 sm:text-2xl md:text-4xl lg:text-5xl">
               家での勉強に、
               <br />
               かつてない緊張感を。
@@ -704,7 +704,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-5 md:px-8">
           <motion.h2
             {...fadeUp}
-            className="text-center font-serif text-2xl font-semibold leading-relaxed text-slate-900 md:text-4xl"
+            className="text-center text-2xl font-bold leading-relaxed text-slate-900 md:text-4xl"
           >
             塾の授業は受けているのに、
             <br />
@@ -754,7 +754,7 @@ export default function Home() {
         <div className="mx-auto max-w-2xl px-5 md:px-8">
           <motion.h2
             {...fadeUp}
-            className="mb-14 text-center font-serif text-2xl font-semibold leading-relaxed text-slate-900 md:mb-20 md:text-3xl"
+            className="mb-14 text-center text-2xl font-bold leading-relaxed text-slate-900 md:mb-20 md:text-3xl"
           >
             でも、いざ自習しようとしても、
             <br />
@@ -803,7 +803,7 @@ export default function Home() {
               >
                 <div className="flex items-center justify-center gap-2.5">
                   <card.icon className="h-5 w-5 text-slate-700" />
-                  <h3 className="font-serif text-lg font-semibold text-slate-800 md:text-xl">
+                  <h3 className="text-lg font-bold text-slate-800 md:text-xl">
                     {card.title}
                   </h3>
                 </div>
@@ -826,7 +826,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <motion.div {...fadeUp} className="text-center">
             <SectionLabel center>解決策</SectionLabel>
-            <h2 className="font-serif text-2xl font-semibold text-slate-900 md:text-3xl lg:text-4xl">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl lg:text-4xl">
               だからこそ、難関大志望者は
               <br className="hidden sm:inline" />
               「Study Ops」を選びます。
@@ -858,7 +858,7 @@ export default function Home() {
                   <span className="text-xs font-medium tracking-widest text-amber-700">
                     0{i + 1}
                   </span>
-                  <h3 className="mt-3 font-serif text-lg font-semibold text-slate-900">
+                  <h3 className="mt-3 text-lg font-bold text-slate-900">
                     {s.title}
                   </h3>
                   <p className="mt-4 text-sm font-light leading-loose text-slate-600">
@@ -988,7 +988,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <motion.div {...fadeUp}>
             <SectionLabel>お知らせ</SectionLabel>
-            <h2 className="mt-5 font-serif text-2xl font-semibold text-slate-900 md:text-3xl lg:text-4xl">
+            <h2 className="mt-5 text-2xl font-bold text-slate-900 md:text-3xl lg:text-4xl">
               新着情報・キャンペーン
             </h2>
           </motion.div>
@@ -1015,7 +1015,7 @@ export default function Home() {
                     style={item.image ? { backgroundImage: `url(${item.image})` } : undefined}
                   />
                   <div className="p-7">
-                    <h3 className="line-clamp-2 font-serif text-lg font-semibold text-slate-900">
+                    <h3 className="line-clamp-2 text-lg font-bold text-slate-900">
                       {item.title}
                     </h3>
                     <div className="mt-5 flex items-center justify-between text-sm text-slate-500">
@@ -1045,7 +1045,7 @@ export default function Home() {
                 <span className="inline-block border border-amber-600/40 bg-amber-50/60 px-4 py-1.5 text-xs font-medium tracking-wide text-amber-800">
                   入会キャンペーン実施中
                 </span>
-                <h2 className="mt-5 font-serif text-2xl font-semibold text-slate-900 md:text-3xl">
+                <h2 className="mt-5 text-2xl font-bold text-slate-900 md:text-3xl">
                   無料体験入会はこちら
                 </h2>
                 <p className="mt-4 text-sm font-light leading-loose text-slate-600">

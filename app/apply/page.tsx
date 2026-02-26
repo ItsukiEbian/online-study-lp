@@ -44,7 +44,7 @@ export default function ApplyPage() {
         <div className="mx-auto flex h-16 max-w-5xl items-center px-4 md:px-8">
           <Link
             href="/"
-            className="text-lg font-semibold font-serif tracking-wide text-slate-900 transition-colors hover:text-amber-700"
+            className="text-lg font-bold tracking-wide text-slate-900 transition-colors hover:text-amber-700"
           >
             Study Ops
           </Link>
@@ -61,7 +61,7 @@ export default function ApplyPage() {
                 無料体験申し込み
               </span>
             </div>
-            <h1 className="text-2xl font-semibold font-serif text-slate-900 md:text-3xl">
+            <h1 className="text-2xl font-bold text-slate-900 md:text-3xl">
               無料体験のお申し込み
             </h1>
             <p className="mt-3 text-sm text-slate-500">
@@ -95,7 +95,7 @@ export default function ApplyPage() {
                       />
                     </svg>
                   </div>
-                  <h2 className="text-xl font-semibold font-serif text-slate-900 md:text-2xl">
+                  <h2 className="text-xl font-bold text-slate-900 md:text-2xl">
                     お申し込みありがとうございます
                   </h2>
                   <p className="mt-4 leading-relaxed text-slate-600">

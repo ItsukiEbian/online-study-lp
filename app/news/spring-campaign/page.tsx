@@ -18,7 +18,7 @@ export default function SpringCampaignPage() {
       {/* ヘッダー */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-stone-50/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-          <Link href="/" className="font-serif text-lg font-semibold tracking-wide text-slate-900">
+          <Link href="/" className="text-lg font-bold tracking-wide text-slate-900">
             Study Ops
           </Link>
           <div className="flex items-center gap-4">
@@ -53,7 +53,7 @@ export default function SpringCampaignPage() {
         {/* 大見出し */}
         <motion.h1
           {...fadeUp(0.05)}
-          className="text-center font-serif text-3xl font-semibold leading-tight text-slate-900 md:text-4xl"
+          className="text-center text-3xl font-bold leading-tight text-slate-900 md:text-4xl"
         >
           新春の入会キャンペーン実施中！
         </motion.h1>
@@ -99,13 +99,13 @@ export default function SpringCampaignPage() {
           </p>
 
           {/* 3つの理由 */}
-          <h2 className="!mt-12 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
+          <h2 className="!mt-12 text-xl font-bold text-slate-900 md:text-2xl">
             Study Opsが、難関大志望者に選ばれる3つの理由
           </h2>
 
           <div className="space-y-6">
             <div>
-              <h3 className="font-serif font-semibold text-slate-900">
+              <h3 className="font-bold text-slate-900">
                 1. 現役医学部生への質問・監視環境
               </h3>
               <p className="mt-1">
@@ -113,7 +113,7 @@ export default function SpringCampaignPage() {
               </p>
             </div>
             <div>
-              <h3 className="font-serif font-semibold text-slate-900">
+              <h3 className="font-bold text-slate-900">
                 2. 難関大を目指す学生のみが集う学習環境
               </h3>
               <p className="mt-1">
@@ -121,7 +121,7 @@ export default function SpringCampaignPage() {
               </p>
             </div>
             <div>
-              <h3 className="font-serif font-semibold text-slate-900">
+              <h3 className="font-bold text-slate-900">
                 3. 深夜の延長戦も、早朝の朝活も。スマホを遮断する「学習環境」
               </h3>
               <p className="mt-1">
@@ -132,7 +132,7 @@ export default function SpringCampaignPage() {
 
           {/* キャンペーン詳細 */}
           <div className="!mt-12 border border-amber-600/30 bg-amber-50/30 p-7 md:p-10">
-            <p className="text-center font-serif text-lg font-semibold text-slate-900">
+            <p className="text-center text-lg font-bold text-slate-900">
               🔥 学年末・新学年準備キャンペーン 🔥
             </p>
             <p className="mt-4">
@@ -171,7 +171,7 @@ export default function SpringCampaignPage() {
           </div>
 
           {/* 結びの文 */}
-          <h2 className="!mt-12 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
+          <h2 className="!mt-12 text-xl font-bold text-slate-900 md:text-2xl">
             「環境と情報」への投資が、合否を分ける
           </h2>
           <p>

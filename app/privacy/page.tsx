@@ -13,7 +13,7 @@ export default function PrivacyPage() {
         <div className="mx-auto flex h-16 max-w-5xl items-center px-6 md:px-10">
           <Link
             href="/"
-            className="text-lg font-serif font-semibold tracking-wide text-slate-900 transition-colors hover:text-amber-700"
+            className="text-lg font-bold tracking-wide text-slate-900 transition-colors hover:text-amber-700"
           >
             Study Ops
           </Link>
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
 
       {/* 本文 */}
       <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-12 md:px-10 md:py-16">
-        <h1 className="text-2xl font-serif font-semibold text-slate-900 md:text-3xl">
+        <h1 className="text-2xl font-bold text-slate-900 md:text-3xl">
           プライバシーポリシー
         </h1>
         <p className="mt-2 text-sm text-slate-500">2026年2月9日 制定</p>
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
 
           {/* 個人情報保護方針 */}
           <section>
-            <h2 className="mb-4 text-lg font-serif font-semibold text-slate-900">個人情報保護方針</h2>
+            <h2 className="mb-4 text-lg font-bold text-slate-900">個人情報保護方針</h2>
             <ol className="list-none space-y-3 pl-0">
               <li>
                 <span className="font-semibold text-slate-900">1.</span>{" "}
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
 
           {/* 個人情報保護法に基づく公表文 */}
           <section>
-            <h2 className="mb-4 text-lg font-serif font-semibold text-slate-900">
+            <h2 className="mb-4 text-lg font-bold text-slate-900">
               個人情報保護法に基づく公表文
             </h2>
             <p>
@@ -83,10 +83,10 @@ export default function PrivacyPage() {
 
           {/* 公表事項 */}
           <section>
-            <h2 className="mb-4 text-lg font-serif font-semibold text-slate-900">公表事項</h2>
+            <h2 className="mb-4 text-lg font-bold text-slate-900">公表事項</h2>
 
             {/* 1. 利用目的 */}
-            <h3 className="mb-3 font-serif font-semibold text-slate-900">
+            <h3 className="mb-3 font-bold text-slate-900">
               1. 個人情報の利用目的について
             </h3>
             <p className="mb-3">
@@ -116,7 +116,7 @@ export default function PrivacyPage() {
             </ol>
 
             {/* 2. 正確性の確保 */}
-            <h3 className="mb-3 font-serif font-semibold text-slate-900">
+            <h3 className="mb-3 font-bold text-slate-900">
               2. 個人データの正確性の確保について
             </h3>
             <p className="mb-8">
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
             </p>
 
             {/* 3. 共同利用 */}
-            <h3 className="mb-3 font-serif font-semibold text-slate-900">
+            <h3 className="mb-3 font-bold text-slate-900">
               3. 個人情報の共同利用について
             </h3>
             <p className="mb-3">
@@ -155,7 +155,7 @@ export default function PrivacyPage() {
             </ol>
 
             {/* 4. 開示請求 */}
-            <h3 className="mb-3 mt-8 font-serif font-semibold text-slate-900">
+            <h3 className="mb-3 mt-8 font-bold text-slate-900">
               4. 開示請求等手続きについて
             </h3>
             <p className="mb-3">
@@ -221,7 +221,7 @@ export default function PrivacyPage() {
             </ol>
 
             {/* 5. Cookie */}
-            <h3 className="mb-3 mt-8 font-serif font-semibold text-slate-900">
+            <h3 className="mb-3 mt-8 font-bold text-slate-900">
               5. クッキー（Cookie）について
             </h3>
             <p>

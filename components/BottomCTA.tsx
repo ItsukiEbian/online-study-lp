@@ -27,7 +27,7 @@ export default function BottomCTA() {
             <span className="inline-block border border-amber-600/40 bg-amber-50/60 px-4 py-1.5 text-xs font-medium tracking-wide text-amber-800">
               入会キャンペーン実施中
             </span>
-            <h2 className="mt-5 font-serif text-2xl font-semibold text-slate-900 md:text-3xl">
+            <h2 className="mt-5 text-2xl font-bold text-slate-900 md:text-3xl">
               無料体験入会はこちら
             </h2>
             <p className="mt-4 text-sm font-light leading-loose text-slate-600">

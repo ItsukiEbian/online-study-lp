@@ -13,7 +13,7 @@ export default function DisclaimerPage() {
         <div className="mx-auto flex h-16 max-w-5xl items-center px-6 md:px-10">
           <Link
             href="/"
-            className="text-lg font-serif font-semibold tracking-wide text-slate-900 transition-colors hover:text-amber-700"
+            className="text-lg font-bold tracking-wide text-slate-900 transition-colors hover:text-amber-700"
           >
             Study Ops
           </Link>
@@ -22,7 +22,7 @@ export default function DisclaimerPage() {
 
       {/* 本文 */}
       <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-12 md:px-10 md:py-16">
-        <h1 className="text-center text-2xl font-serif font-semibold text-slate-900 md:text-3xl">
+        <h1 className="text-center text-2xl font-bold text-slate-900 md:text-3xl">
           免責事項
         </h1>
 
@@ -33,7 +33,7 @@ export default function DisclaimerPage() {
           </p>
 
           {/* 第1条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第1条（成績向上および志望校合格の非保証）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -48,7 +48,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第2条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第2条（メンターの指導およびシステムによるサポートの性質）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -67,7 +67,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第3条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第3条（通信環境、システム障害および不可抗力に関する免責）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -86,7 +86,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第4条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第4条（外部サービスの利用に関する免責）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -101,7 +101,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第5条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第5条（ユーザー間および第三者とのトラブルに関する免責）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -120,7 +120,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第6条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第6条（データの消失に関する免責）
           </h2>
           <p className="mt-4">
@@ -128,7 +128,7 @@ export default function DisclaimerPage() {
           </p>
 
           {/* 第7条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第7条（損害賠償責任の制限と消費者契約法等の適用）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -147,7 +147,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第8条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第8条（著作権等）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -166,7 +166,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第9条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第9条（当社の免責）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -186,7 +186,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第10条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第10条（個人情報）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -205,7 +205,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第11条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第11条（統計情報・属性情報・利用記録の閲覧、集計および利用）
           </h2>
           <p className="mt-4">
@@ -213,7 +213,7 @@ export default function DisclaimerPage() {
           </p>
 
           {/* 第12条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第12条（当社の責任）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -232,7 +232,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第13条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第13条（反社会的勢力の排除）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -262,7 +262,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第14条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第14条（譲渡等禁止）
           </h2>
           <p className="mt-4">
@@ -270,7 +270,7 @@ export default function DisclaimerPage() {
           </p>
 
           {/* 第15条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第15条（利用停止）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -285,7 +285,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第16条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第16条（退会）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -300,7 +300,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第17条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第17条（会員登録の抹消等）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -319,7 +319,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第18条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第18条（サービスの中断、変更、終了）
           </h2>
           <p className="mt-4">
@@ -327,7 +327,7 @@ export default function DisclaimerPage() {
           </p>
 
           {/* 第19条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第19条（サービスの一時的な停止）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -343,7 +343,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第20条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第20条（不可抗力）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -362,7 +362,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第21条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第21条（規約の変更）
           </h2>
           <ol className="mt-4 list-none space-y-3 pl-0">
@@ -377,7 +377,7 @@ export default function DisclaimerPage() {
           </ol>
 
           {/* 第22条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第22条（分離条項）
           </h2>
           <p className="mt-4">
@@ -385,7 +385,7 @@ export default function DisclaimerPage() {
           </p>
 
           {/* 第23条 */}
-          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-serif font-semibold text-slate-900">
+          <h2 className="mt-10 border-b border-slate-300 pb-2 text-lg font-bold text-slate-900">
             第23条（準拠法および管轄）
           </h2>
           <p className="mt-4">

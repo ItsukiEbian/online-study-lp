@@ -34,7 +34,7 @@ export default function ProCoursePage() {
       {/* ヘッダー */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-stone-50/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-          <Link href="/" className="font-serif text-lg font-semibold tracking-wide text-slate-900">
+          <Link href="/" className="text-lg font-bold tracking-wide text-slate-900">
             Study Ops
           </Link>
           <div className="flex items-center gap-4">
@@ -79,7 +79,7 @@ export default function ProCoursePage() {
                   コース紹介
                 </span>
               </div>
-              <h1 className="font-serif text-3xl font-semibold text-slate-900 md:text-4xl">
+              <h1 className="text-3xl font-bold text-slate-900 md:text-4xl">
                 Proコース
               </h1>
               <p className="mt-4 max-w-3xl font-light text-base leading-loose text-slate-600">
@@ -96,7 +96,7 @@ export default function ProCoursePage() {
             >
               {/* コース概要 */}
               <section>
-                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
+                <h2 className="mb-4 text-xl font-bold text-slate-900 md:text-2xl">
                   コース概要
                 </h2>
                 <p className="font-light leading-loose text-slate-700">
@@ -111,7 +111,7 @@ export default function ProCoursePage() {
                 whileInView="visible"
                 viewport={VP}
               >
-                <h2 className="mb-6 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
+                <h2 className="mb-6 text-xl font-bold text-slate-900 md:text-2xl">
                   対象となる生徒の課題
                 </h2>
                 <ul className="space-y-4">
@@ -143,7 +143,7 @@ export default function ProCoursePage() {
                 whileInView="visible"
                 viewport={VP}
               >
-                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
+                <h2 className="mb-4 text-xl font-bold text-slate-900 md:text-2xl">
                   Proプランのコア機能と詳細
                 </h2>
                 <p className="mb-6 font-light leading-loose text-slate-700">
@@ -189,7 +189,7 @@ export default function ProCoursePage() {
                 viewport={VP}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="mb-4 font-serif text-xl font-semibold text-slate-900 md:text-2xl">
+                <h2 className="mb-4 text-xl font-bold text-slate-900 md:text-2xl">
                   運営・完遂方針
                 </h2>
                 <p className="font-light leading-loose text-slate-700">

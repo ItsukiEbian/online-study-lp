@@ -17,7 +17,7 @@ export default function CourseSidebar() {
       <div className="border border-slate-200 bg-white p-6">
         <div className="mb-5 flex items-center gap-2.5">
           <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-700" />
-          <span className="font-serif text-sm font-semibold text-slate-900">コース一覧</span>
+          <span className="text-sm font-bold text-slate-900">コース一覧</span>
         </div>
 
         <nav className="space-y-1">

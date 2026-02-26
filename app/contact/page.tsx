@@ -13,7 +13,7 @@ function SimpleHeader() {
       <div className="mx-auto flex max-w-5xl items-center px-6 py-4 md:px-10 lg:px-16">
         <Link
           href="/"
-          className="text-lg font-serif font-semibold tracking-wide text-slate-900 transition hover:text-amber-700"
+          className="text-lg font-bold tracking-wide text-slate-900 transition hover:text-amber-700"
         >
           Study Ops
         </Link>
@@ -58,7 +58,7 @@ export default function ContactPage() {
       <main className="mx-auto flex w-full max-w-lg flex-1 items-center px-6 py-12 md:py-16">
         <div className="w-full">
           <motion.h1
-            className="text-center text-2xl font-serif font-semibold text-slate-900 md:text-3xl"
+            className="text-center text-2xl font-bold text-slate-900 md:text-3xl"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}

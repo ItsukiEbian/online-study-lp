@@ -12,7 +12,7 @@ export default function NotFound() {
       {/* ヘッダー */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-stone-50/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-          <Link href="/" className="font-serif text-lg font-semibold tracking-wide text-slate-900">
+          <Link href="/" className="text-lg font-bold tracking-wide text-slate-900">
             Study Ops
           </Link>
           <div className="flex items-center gap-4">
@@ -40,7 +40,7 @@ export default function NotFound() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <h1 className="mb-8 font-serif text-3xl font-semibold text-slate-900 md:text-4xl">
+          <h1 className="mb-8 text-3xl font-bold text-slate-900 md:text-4xl">
             404 Not Found
           </h1>
           <p className="leading-relaxed font-light text-slate-600">
