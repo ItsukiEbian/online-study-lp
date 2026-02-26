@@ -737,11 +737,9 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" as const }}
             className="mt-14"
           >
-            <Image
+            <img
               src="/HP_Img05.jpg"
               alt="授業と自習の時間比率を示す図解"
-              width={1200}
-              height={800}
               className="mx-auto h-auto w-full max-w-5xl shadow-sm"
             />
           </motion.div>
