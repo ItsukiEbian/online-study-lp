@@ -30,7 +30,7 @@ export default function HeroSection() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
             href="#cta"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-medium text-white transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-accent"
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-base font-medium text-white transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-accent"
           >
             無料相談はこちら
             <ArrowRight className="size-5" aria-hidden />
