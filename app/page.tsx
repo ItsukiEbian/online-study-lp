@@ -112,9 +112,8 @@ function FAQCategoryAccordion({
       >
         <h3 className="text-xl font-bold text-slate-800">【{title}】</h3>
         <ChevronRight
-          className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-300 ${
-            open ? "rotate-90" : ""
-          }`}
+          className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-300 ${open ? "rotate-90" : ""
+            }`}
         />
       </button>
       <motion.div
@@ -739,7 +738,7 @@ export default function Home() {
             className="mt-14"
           >
             <Image
-              src="/jishu-chart.jpg"
+              src="/HP_Img05.jpg"
               alt="授業と自習の時間比率を示す図解"
               width={1200}
               height={800}
