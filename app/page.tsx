@@ -487,12 +487,12 @@ export default function Home() {
             >
               ログイン
             </a>
-            <Link
-              href="/apply"
+            <a
+              href="https://app.studyops.jp/dashboard"
               className="whitespace-nowrap border border-slate-900 bg-slate-900 px-4 py-2.5 text-xs font-medium tracking-wide text-white transition-colors hover:bg-slate-800 md:px-5 md:text-sm"
             >
               まずは7日間 無料トライアル
-            </Link>
+            </a>
           </div>
 
           <button
@@ -604,13 +604,13 @@ export default function Home() {
               </ul>
 
               <div className="mt-14 flex flex-col gap-3">
-                <Link
-                  href="/apply"
+                <a
+                  href="https://app.studyops.jp/dashboard"
                   onClick={() => setMenuOpen(false)}
                   className="whitespace-nowrap bg-slate-900 px-6 py-3.5 text-center text-sm font-medium tracking-wide text-white transition-colors hover:bg-slate-800"
                 >
                   まずは7日間 無料トライアル
-                </Link>
+                </a>
                 <a
                   href="https://app.studyops.jp/dashboard"
                   className="inline-flex items-center justify-center gap-2 border border-slate-300 px-6 py-3.5 text-center text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50"
@@ -669,7 +669,7 @@ export default function Home() {
             </p>
 
             <motion.a
-              href="/apply"
+              href="https://app.studyops.jp/dashboard"
               className="mx-auto mt-12 block w-full max-w-md border border-slate-900 bg-slate-900 px-6 py-5 text-center text-white transition-all hover:bg-slate-800"
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.98 }}
@@ -688,7 +688,7 @@ export default function Home() {
       <div className="fixed inset-x-0 bottom-0 z-50 md:hidden">
         <div className="border-t border-slate-200/60 bg-stone-50/90 px-4 pb-[env(safe-area-inset-bottom,8px)] pt-2 backdrop-blur-md">
           <a
-            href="/apply"
+            href="https://app.studyops.jp/dashboard"
             className="block w-full bg-slate-900 px-4 py-3.5 text-center text-white"
           >
             <span className="block whitespace-nowrap text-base font-medium tracking-wide leading-tight">
@@ -892,13 +892,19 @@ export default function Home() {
                       比較・機能項目
                     </th>
                     <th className="border-b border-l border-slate-200 bg-slate-900 px-6 py-5 text-center font-medium tracking-wide text-white md:w-[33%]">
-                      <span>Standardプラン</span>
-                      <span className="ml-2 inline-block border border-amber-400/60 bg-amber-50 px-2 py-0.5 text-[10px] font-medium leading-none text-amber-800">
-                        人気
-                      </span>
+                      <div className="flex flex-col items-center gap-1.5">
+                        <span className="inline-block border border-amber-400/60 bg-amber-50 px-2.5 py-0.5 text-[10px] font-medium leading-none text-amber-800">
+                          人気
+                        </span>
+                        <span>Standardプラン</span>
+                        <span className="mt-1 text-2xl font-bold md:text-3xl">24,800<span className="text-sm font-medium">円</span></span>
+                      </div>
                     </th>
                     <th className="border-b border-l border-slate-200 bg-slate-800 px-6 py-5 text-center font-medium tracking-wide text-white md:w-[33%]">
-                      Proプラン
+                      <div className="flex flex-col items-center gap-1.5">
+                        <span>Proプラン</span>
+                        <span className="mt-1 text-2xl font-bold md:text-3xl">49,800<span className="text-sm font-medium">円</span></span>
+                      </div>
                     </th>
                   </tr>
                 </thead>
@@ -1051,7 +1057,7 @@ export default function Home() {
                   まずは無料体験で、オンライン自習室の集中できる環境を実感してください。クレジットカード不要、メールアドレスのみで始められます。
                 </p>
                 <motion.a
-                  href="/apply"
+                  href="https://app.studyops.jp/dashboard"
                   className="mt-8 inline-flex items-center whitespace-nowrap border border-slate-900 bg-slate-900 px-6 py-3.5 text-xs font-medium tracking-wide text-white transition-colors hover:bg-slate-800 md:px-8 md:text-sm"
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.98 }}
