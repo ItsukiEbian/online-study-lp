@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import CourseSidebar from "@/components/CourseSidebar";
 import BottomCTA from "@/components/BottomCTA";
 
@@ -32,9 +33,10 @@ export default function SchoolCoursePage() {
             </a>
             <Link
               href="/apply"
-              className="whitespace-nowrap border border-slate-900 bg-slate-900 px-4 py-2.5 text-xs font-medium tracking-wide text-white transition-colors hover:bg-slate-800 md:px-5 md:text-sm"
+              className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-md border border-[#C5A059]/60 bg-slate-900 px-4 py-2.5 text-xs font-medium tracking-wide text-white shadow-md transition-all duration-200 hover:shadow-lg hover:opacity-90 active:scale-[0.98] md:px-5 md:text-sm"
             >
               まずは7日間 無料トライアル
+              <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </div>
@@ -238,6 +240,9 @@ export default function SchoolCoursePage() {
             </Link>
             <Link href="/disclaimer" className="text-slate-500 transition-colors hover:text-slate-800">
               免責事項
+            </Link>
+            <Link href="/tokushoho" className="text-slate-500 transition-colors hover:text-slate-800">
+              特定商取引法に基づく表記
             </Link>
           </nav>
           <p className="text-sm text-slate-400">

@@ -94,16 +94,16 @@ export default function PrivacyPage() {
             </p>
 
             <p className="mb-2 font-semibold text-slate-900">＜業務内容＞</p>
-            <ol className="mb-4 list-decimal space-y-1 pl-6">
+            <ul className="mb-4 list-disc space-y-1 pl-6">
               <li>オンライン個別指導</li>
               <li>受験コンサルティング</li>
               <li>インターネットによる教材提供事業</li>
               <li>オンライン自習室</li>
               <li>その他、上記各項に関連し、または附帯する事業</li>
-            </ol>
+            </ul>
 
             <p className="mb-2 font-semibold text-slate-900">＜利用目的＞</p>
-            <ol className="mb-8 list-decimal space-y-1 pl-6">
+            <ul className="mb-8 list-disc space-y-1 pl-6">
               <li>各種商品の申込受付のため</li>
               <li>本人確認法に基づくご本人さまの確認等や、商品やサービスをご利用いただく資格等の確認のため</li>
               <li>授業のスケジュール管理等、継続的な役務における管理のため</li>
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
               <li>ダイレクトメールの発送等、商品やサービスに関する各種ご提案のため</li>
               <li>提携会社等の商品やサービスの各種ご提案のため</li>
               <li>各種ご契約の解約やお取引解約後の事後管理のため</li>
-            </ol>
+            </ul>
 
             {/* 2. 正確性の確保 */}
             <h3 className="mb-3 font-bold text-slate-900">
@@ -128,100 +128,91 @@ export default function PrivacyPage() {
               3. 個人情報の共同利用について
             </h3>
             <p className="mb-3">
-              Study Grit社では以下の取扱いにより個人情報を相互に提供し共同で利用いたします。
+              StudyOps社では以下の取扱いにより個人情報を相互に提供し共同で利用いたします。
             </p>
-            <ol className="mb-3 list-decimal space-y-3 pl-6">
-              <li>
-                共同利用における皆様の個人情報の利用目的は次のとおりです。
-                <ul className="mt-2 list-disc space-y-1 pl-6">
-                  <li>各種指導契約の締結、継続・維持管理</li>
-                  <li>各種商品・サービスのご案内・提供・ＤＭ発送</li>
-                  <li>当グループの業務に関する情報提供・運営管理、商品・サービスの充実</li>
-                </ul>
-              </li>
-              <li>
-                Study Grit社では、下記の相互提供項目の全部または一部について、皆様の個人情報を相互に提供し、上記利用目的の達成に必要な範囲内で、その情報を取得・利用いたします。
-              </li>
-              <li>
-                相互提供項目は次のとおりです。
-                <ul className="mt-2 list-disc space-y-1 pl-6">
-                  <li>ご本人に関して：氏名、生年月日、性別、連絡先（住所・電話番号、メールアドレスなど）、職業、就業先および勤務先、口座振替に使用する口座情報</li>
-                  <li>ご契約に関して：契約種類、契約日、契約期間、契約終了日、授業料の金額および支払い方法、契約時にご提出いただく各種書類の記載事項</li>
-                </ul>
-              </li>
-              <li>
-                共同利用における当社が保持する皆様の個人情報に関しては当社が管理責任を負います。皆様の個人情報の共同利用に関するお問い合わせ、お申し出は、Study Grit社相談窓口またはお電話にて受け付けております。
-              </li>
-            </ol>
+            <p className="mb-3">
+              共同利用における皆様の個人情報の利用目的は次のとおりです。
+            </p>
+            <ul className="mb-4 list-disc space-y-1 pl-6">
+              <li>各種指導契約の締結、継続・維持管理</li>
+              <li>各種商品・サービスのご案内・提供・ＤＭ発送</li>
+              <li>当グループの業務に関する情報提供・運営管理、商品・サービスの充実</li>
+            </ul>
+            <p className="mb-3">
+              StudyOps社では、下記の相互提供項目の全部または一部について、皆様の個人情報を相互に提供し、上記利用目的の達成に必要な範囲内で、その情報を取得・利用いたします。
+            </p>
+            <p className="mb-2 font-semibold text-slate-900">相互提供項目は次のとおりです。</p>
+            <ul className="mb-4 list-disc space-y-1 pl-6">
+              <li>ご本人に関して：氏名、生年月日、性別、連絡先（住所・電話番号、メールアドレスなど）、職業、就業先および勤務先、口座振替に使用する口座情報</li>
+              <li>ご契約に関して：契約種類、契約日、契約期間、契約終了日、授業料の金額および支払い方法、契約時にご提出いただく各種書類の記載事項</li>
+            </ul>
+            <p className="mb-8">
+              共同利用における当社が保持する皆様の個人情報に関しては当社が管理責任を負います。皆様の個人情報の共同利用に関するお問い合わせ、お申し出は、StudyOps社相談窓口またはお電話にて受け付けております。
+            </p>
 
             {/* 4. 開示請求 */}
-            <h3 className="mb-3 mt-8 font-bold text-slate-900">
+            <h3 className="mb-3 font-bold text-slate-900">
               4. 開示請求等手続きについて
             </h3>
             <p className="mb-3">
               当社は、法第24条2項、第25条、第26条1項、ならびに第27条1項および2項に基づき（以下、これらの手続きを総称して「開示請求等手続」といいます）、ご本人またはその代理人からのご依頼により、以下の要領で開示請求等手続に対応いたします。なお、法第24条2項に基づき利用目的の通知をご希望される場合、及び、法第27条1項および2項に基づき保有個人データの利用停止等をお申し出の場合は、最寄りの本社または支店にお申し出下さい。
             </p>
-            <ol className="list-decimal space-y-3 pl-6">
-              <li>
-                <span className="font-semibold text-slate-900">開示請求等手続きの対象となる保有個人データの項目</span>
-                <br />
-                氏名、住所、電話番号、生年月日、勤務先（勤務先名または職業・電話番号）、取引の履歴に関する情報等
-              </li>
-              <li>
-                <span className="font-semibold text-slate-900">開示請求等手続きの受付窓口</span>
-                <br />
-                受付窓口URL：（準備中）
-              </li>
-              <li>
-                <span className="font-semibold text-slate-900">ご提出いただくもの</span>
-                <ul className="mt-2 list-disc space-y-1 pl-6">
-                  <li>個人情報開示依頼書</li>
-                  <li>本人確認のための書類（運転免許証やパスポート等の写し1点）</li>
-                  <li>法定代理人による開示請求等の場合は、上記に加え代理権があることを確認するための書類</li>
-                </ul>
-              </li>
-              <li>
-                <span className="font-semibold text-slate-900">手数料</span>
-                <br />
-                法第25条に基づく開示請求の場合は、当社が下記に定める手数料をいただきます。
-                <ul className="mt-2 list-disc space-y-1 pl-6">
-                  <li>氏名、生年月日、性別、連絡先（住所・電話番号、メールアドレスなど）、職業、就業先および勤務先：1,000円</li>
-                  <li>契約種類、契約日、契約期間、契約終了時、授業料の金額および支払い方法、契約時にご提出いただく各種書類の記載事項：3,000円</li>
-                </ul>
-              </li>
-              <li>
-                <span className="font-semibold text-slate-900">回答方法</span>
-                <br />
-                ご本人よりお届けいただいた住所宛てにご郵送する方法で遅滞なく書面にて回答いたします。なお、代理人によるご依頼の場合であっても、ご本人に直接回答することがございますので、予めご了承願います。
-              </li>
-              <li>
-                <span className="font-semibold text-slate-900">開示請求等手続きに関して</span>
-                <br />
-                取得した個人情報の利用目的：開示請求等手続きにより当社が取得した個人情報は、当該手続きのための調査、ご本人ならびに代理人の本人確認、および当該開示請求等に対する回答に利用いたします。
-              </li>
-              <li>
-                <span className="font-semibold text-slate-900">開示しない場合のお取扱いについて</span>
-                <br />
-                次に定める場合は、開示いたしかねますので、予めご了承願います。開示しないことを決定した場合は、その旨理由を付して通知申し上げます。
-                <ol className="mt-2 list-decimal space-y-1 pl-6">
-                  <li>ご本人の確認ができない場合</li>
-                  <li>代理人によるご依頼に際して、代理権が確認できない場合</li>
-                  <li>所定の依頼書類に不備があった場合</li>
-                  <li>ご依頼のあった情報項目が、保有個人データに該当しない場合</li>
-                  <li>本人または第三者の生命、身体、財産その他の権利利益を害するおそれがある場合</li>
-                  <li>当社の業務の適正な実施に著しい支障を及ぼすおそれがある場合</li>
-                  <li>他の法令に違反することとなる場合</li>
-                </ol>
-              </li>
-              <li>
-                <span className="font-semibold text-slate-900">その他お問い合わせについて</span>
-                <br />
-                当社の個人情報に関するお問い合わせ、苦情等につきましては、下記窓口までお願い致します。
-              </li>
-            </ol>
+
+            <p className="mb-2 font-semibold text-slate-900">開示請求等手続きの対象となる保有個人データの項目</p>
+            <p className="mb-4">
+              氏名、住所、電話番号、生年月日、勤務先（勤務先名または職業・電話番号）、取引の履歴に関する情報等
+            </p>
+
+            <p className="mb-2 font-semibold text-slate-900">開示請求等手続きの受付窓口</p>
+            <p className="mb-4">受付窓口URL：（準備中）</p>
+
+            <p className="mb-2 font-semibold text-slate-900">ご提出いただくもの</p>
+            <ul className="mb-4 list-disc space-y-1 pl-6">
+              <li>個人情報開示依頼書</li>
+              <li>本人確認のための書類（運転免許証やパスポート等の写し1点）</li>
+              <li>法定代理人による開示請求等の場合は、上記に加え代理権があることを確認するための書類</li>
+            </ul>
+
+            <p className="mb-2 font-semibold text-slate-900">手数料</p>
+            <p className="mb-2">
+              法第25条に基づく開示請求の場合は、当社が下記に定める手数料をいただきます。
+            </p>
+            <ul className="mb-4 list-disc space-y-1 pl-6">
+              <li>氏名、生年月日、性別、連絡先（住所・電話番号、メールアドレスなど）、職業、就業先および勤務先：1,000円</li>
+              <li>契約種類、契約日、契約期間、契約終了時、授業料の金額および支払い方法、契約時にご提出いただく各種書類の記載事項：3,000円</li>
+            </ul>
+
+            <p className="mb-2 font-semibold text-slate-900">回答方法</p>
+            <p className="mb-4">
+              ご本人よりお届けいただいた住所宛てにご郵送する方法で遅滞なく書面にて回答いたします。なお、代理人によるご依頼の場合であっても、ご本人に直接回答することがございますので、予めご了承願います。
+            </p>
+
+            <p className="mb-2 font-semibold text-slate-900">開示請求等手続きに関して</p>
+            <p className="mb-4">
+              取得した個人情報の利用目的：開示請求等手続きにより当社が取得した個人情報は、当該手続きのための調査、ご本人ならびに代理人の本人確認、および当該開示請求等に対する回答に利用いたします。
+            </p>
+
+            <p className="mb-2 font-semibold text-slate-900">開示しない場合のお取扱いについて</p>
+            <p className="mb-2">
+              次に定める場合は、開示いたしかねますので、予めご了承願います。開示しないことを決定した場合は、その旨理由を付して通知申し上げます。
+            </p>
+            <ul className="mb-4 list-disc space-y-1 pl-6">
+              <li>ご本人の確認ができない場合</li>
+              <li>代理人によるご依頼に際して、代理権が確認できない場合</li>
+              <li>所定の依頼書類に不備があった場合</li>
+              <li>ご依頼のあった情報項目が、保有個人データに該当しない場合</li>
+              <li>本人または第三者の生命、身体、財産その他の権利利益を害するおそれがある場合</li>
+              <li>当社の業務の適正な実施に著しい支障を及ぼすおそれがある場合</li>
+              <li>他の法令に違反することとなる場合</li>
+            </ul>
+
+            <p className="mb-2 font-semibold text-slate-900">その他お問い合わせについて</p>
+            <p className="mb-8">
+              当社の個人情報に関するお問い合わせ、苦情等につきましては、下記窓口までお願い致します。
+            </p>
 
             {/* 5. Cookie */}
-            <h3 className="mb-3 mt-8 font-bold text-slate-900">
+            <h3 className="mb-3 font-bold text-slate-900">
               5. クッキー（Cookie）について
             </h3>
             <p>
@@ -254,6 +245,9 @@ export default function PrivacyPage() {
             </Link>
             <Link href="/disclaimer" className="text-slate-500 transition-colors hover:text-slate-800">
               免責事項
+            </Link>
+            <Link href="/tokushoho" className="text-slate-500 transition-colors hover:text-slate-800">
+              特定商取引法に基づく表記
             </Link>
           </nav>
           <p className="text-sm text-slate-400">

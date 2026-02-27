@@ -15,8 +15,17 @@ const notoSerifJP = Noto_Serif_JP({
 });
 
 export const metadata: Metadata = {
-  title: "自宅学習を最適化 | 学習塾",
-  description: "自宅学習を最適化し、成果につなげる学習塾",
+  title: "Study Ops | 難関大志望者のためのオンライン自習室",
+  description:
+    "家での勉強に、かつてない緊張感を。難関大志望者のための、24時間繋がるオンライン自習室「Study Ops」。スマホをカメラとして使う監視システムで、極限の集中空間を提供します。",
+  openGraph: {
+    title: "Study Ops | 難関大志望者のためのオンライン自習室",
+    description:
+      "家での勉強に、かつてない緊張感を。難関大志望者のための、24時間繋がるオンライン自習室「Study Ops」。スマホをカメラとして使う監視システムで、極限の集中空間を提供します。",
+    siteName: "Study Ops",
+    locale: "ja_JP",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

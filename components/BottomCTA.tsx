@@ -2,14 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const VP = { once: true, margin: "-80px" as const };
 
 const ctaLinks = [
-  { label: "資料請求する", href: "#", external: false },
   { label: "コース紹介", href: "/courses/standard", external: false },
   { label: "LINE友だち登録", href: "https://line.me/R/ti/p/@361nbhjg", external: true },
-  { label: "キャンペーン", href: "/news/spring-campaign", external: false },
 ];
 
 export default function BottomCTA() {
@@ -24,10 +23,7 @@ export default function BottomCTA() {
       >
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <span className="inline-block border border-amber-600/40 bg-amber-50/60 px-4 py-1.5 text-xs font-medium tracking-wide text-amber-800">
-              入会キャンペーン実施中
-            </span>
-            <h2 className="mt-5 text-2xl font-bold text-slate-900 md:text-3xl">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
               無料体験入会はこちら
             </h2>
             <p className="mt-4 text-sm font-light leading-loose text-slate-600">
@@ -35,9 +31,10 @@ export default function BottomCTA() {
             </p>
             <Link
               href="/apply"
-              className="mt-8 inline-flex items-center whitespace-nowrap border border-slate-900 bg-slate-900 px-6 py-3.5 text-xs font-medium tracking-wide text-white transition-colors hover:bg-slate-800 md:px-8 md:text-sm"
+              className="mt-8 inline-flex items-center gap-2 whitespace-nowrap rounded-md border border-[#C5A059]/60 bg-slate-900 px-6 py-3.5 text-xs font-medium tracking-wide text-white shadow-md transition-all duration-200 hover:shadow-lg hover:opacity-90 active:scale-[0.98] md:px-8 md:text-sm"
             >
               まずは7日間 無料トライアル
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 

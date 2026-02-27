@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback, type ReactNode } from "react"
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import { ChevronLeft, ChevronRight, Plus, Minus, Award, Menu, X, LogIn, Smartphone, Clock, UserX, Circle } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, Plus, Minus, Menu, X, LogIn, Smartphone, Clock, UserX, Circle } from "lucide-react";
 import DocumentRequestDrawer from "@/components/DocumentRequestDrawer";
 
 /* ────────────────────────────
@@ -434,21 +434,11 @@ const faqCategories = [
   },
 ];
 
-const newsItems = [
-  {
-    title: "新春の入会キャンペーン実施中！",
-    date: "2026.02.24",
-    category: "キャンペーン",
-    href: "/news/spring-campaign",
-    image: "https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=800&q=80",
-  },
-];
+const newsItems: { title: string; date: string; category: string; href: string; image?: string }[] = [];
 
 const ctaSubLinks = [
-  { label: "資料請求する", href: "#", isDrawer: true },
   { label: "コース紹介", href: "#courses", isDrawer: false },
   { label: "LINE友だち登録", href: "https://line.me/R/ti/p/@361nbhjg", isDrawer: false, external: true },
-  { label: "キャンペーン", href: "#news", isDrawer: false },
 ];
 
 /* ────────────────────────────
@@ -489,9 +479,10 @@ export default function Home() {
             </a>
             <a
               href="https://app.studyops.jp/dashboard"
-              className="whitespace-nowrap border border-slate-900 bg-slate-900 px-4 py-2.5 text-xs font-medium tracking-wide text-white transition-colors hover:bg-slate-800 md:px-5 md:text-sm"
+              className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-md border border-[#C5A059]/60 bg-slate-900 px-4 py-2.5 text-xs font-medium tracking-wide text-white shadow-md transition-all duration-200 hover:shadow-lg hover:opacity-90 active:scale-[0.98] md:px-5 md:text-sm"
             >
               まずは7日間 無料トライアル
+              <ArrowRight className="h-3.5 w-3.5" />
             </a>
           </div>
 
@@ -598,7 +589,7 @@ export default function Home() {
                     onClick={() => setMenuOpen(false)}
                     className="text-2xl font-bold text-slate-900"
                   >
-                    お知らせ・キャンペーン
+                    お知らせ
                   </a>
                 </li>
               </ul>
@@ -607,9 +598,10 @@ export default function Home() {
                 <a
                   href="https://app.studyops.jp/dashboard"
                   onClick={() => setMenuOpen(false)}
-                  className="whitespace-nowrap bg-slate-900 px-6 py-3.5 text-center text-sm font-medium tracking-wide text-white transition-colors hover:bg-slate-800"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border border-[#C5A059]/60 bg-slate-900 px-6 py-3.5 text-center text-sm font-medium tracking-wide text-white shadow-md transition-all duration-200 hover:shadow-lg hover:opacity-90 active:scale-[0.98]"
                 >
                   まずは7日間 無料トライアル
+                  <ArrowRight className="h-4 w-4" />
                 </a>
                 <a
                   href="https://app.studyops.jp/dashboard"
@@ -649,10 +641,6 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.25, ease: "easeOut" as const }}
             className="relative z-10 pt-10 text-center md:pt-14"
           >
-            <span className="inline-flex items-center gap-2 border border-amber-600/40 bg-amber-50/60 px-6 py-2.5 text-base font-medium tracking-wide text-amber-800 md:text-lg">
-              <Award className="h-5 w-5" />
-              今だけ入学キャンペーン実施中
-            </span>
 
             <h1 className="mt-8 whitespace-nowrap text-xl font-bold leading-relaxed tracking-wide text-slate-900 sm:text-2xl md:text-4xl lg:text-5xl">
               家での勉強に、
@@ -670,13 +658,14 @@ export default function Home() {
 
             <motion.a
               href="https://app.studyops.jp/dashboard"
-              className="mx-auto mt-12 block w-full max-w-md border border-slate-900 bg-slate-900 px-6 py-5 text-center text-white transition-all hover:bg-slate-800"
+              className="mx-auto mt-12 flex w-full max-w-md items-center justify-center gap-2 rounded-lg border border-[#C5A059]/60 bg-slate-900 px-6 py-5 text-center text-white shadow-md transition-all duration-200 hover:shadow-lg hover:opacity-90"
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span className="block whitespace-nowrap text-lg font-medium tracking-wide md:text-2xl lg:text-3xl">
+              <span className="whitespace-nowrap text-lg font-medium tracking-wide md:text-2xl lg:text-3xl">
                 まずは7日間 無料トライアル
               </span>
+              <ArrowRight className="h-5 w-5 md:h-6 md:w-6" />
             </motion.a>
           </motion.div>
         </div>
@@ -689,11 +678,12 @@ export default function Home() {
         <div className="border-t border-slate-200/60 bg-stone-50/90 px-4 pb-[env(safe-area-inset-bottom,8px)] pt-2 backdrop-blur-md">
           <a
             href="https://app.studyops.jp/dashboard"
-            className="block w-full bg-slate-900 px-4 py-3.5 text-center text-white"
+            className="flex w-full items-center justify-center gap-2 rounded-lg border border-[#C5A059]/60 bg-slate-900 px-4 py-3.5 text-center text-white shadow-md transition-all duration-200 active:scale-[0.98]"
           >
-            <span className="block whitespace-nowrap text-base font-medium tracking-wide leading-tight">
+            <span className="whitespace-nowrap text-base font-medium tracking-wide leading-tight">
               まずは7日間 無料トライアル
             </span>
+            <ArrowRight className="h-4 w-4 shrink-0" />
           </a>
         </div>
       </div>
@@ -991,45 +981,51 @@ export default function Home() {
           <motion.div {...fadeUp}>
             <SectionLabel>お知らせ</SectionLabel>
             <h2 className="mt-5 text-2xl font-bold text-slate-900 md:text-3xl lg:text-4xl">
-              新着情報・キャンペーン
+              新着情報
             </h2>
           </motion.div>
 
           <motion.div
             className="mt-16 flex justify-center"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={VP}
+            transition={{ duration: 0.6, delay: 0.15 }}
           >
-            {newsItems.map((item) => (
-              <motion.div
-                key={item.title}
-                variants={itemVariants}
-                className="w-full max-w-sm"
-              >
-                <Link
-                  href={item.href}
-                  className="group block overflow-hidden border border-slate-200 bg-white transition-transform hover:-translate-y-0.5 hover:shadow-sm"
+            {newsItems.length > 0 ? (
+              newsItems.map((item) => (
+                <motion.div
+                  key={item.title}
+                  variants={itemVariants}
+                  className="w-full max-w-sm"
                 >
-                  <div
-                    className="h-48 bg-slate-100 bg-cover bg-center"
-                    style={item.image ? { backgroundImage: `url(${item.image})` } : undefined}
-                  />
-                  <div className="p-7">
-                    <h3 className="line-clamp-2 text-lg font-bold text-slate-900">
-                      {item.title}
-                    </h3>
-                    <div className="mt-5 flex items-center justify-between text-sm text-slate-500">
-                      <time>{item.date}</time>
-                      <span className="border border-slate-200 px-3 py-0.5 text-xs font-medium text-slate-600">
-                        {item.category}
-                      </span>
+                  <Link
+                    href={item.href}
+                    className="group block overflow-hidden border border-slate-200 bg-white transition-transform hover:-translate-y-0.5 hover:shadow-sm"
+                  >
+                    <div
+                      className="h-48 bg-slate-100 bg-cover bg-center"
+                      style={item.image ? { backgroundImage: `url(${item.image})` } : undefined}
+                    />
+                    <div className="p-7">
+                      <h3 className="line-clamp-2 text-lg font-bold text-slate-900">
+                        {item.title}
+                      </h3>
+                      <div className="mt-5 flex items-center justify-between text-sm text-slate-500">
+                        <time>{item.date}</time>
+                        <span className="border border-slate-200 px-3 py-0.5 text-xs font-medium text-slate-600">
+                          {item.category}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+                  </Link>
+                </motion.div>
+              ))
+            ) : (
+              <p className="text-sm font-light text-slate-500">
+                現在、新しいお知らせはありません。
+              </p>
+            )}
           </motion.div>
 
         </div>
@@ -1044,10 +1040,7 @@ export default function Home() {
           >
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
               <div>
-                <span className="inline-block border border-amber-600/40 bg-amber-50/60 px-4 py-1.5 text-xs font-medium tracking-wide text-amber-800">
-                  入会キャンペーン実施中
-                </span>
-                <h2 className="mt-5 text-2xl font-bold text-slate-900 md:text-3xl">
+                <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
                   無料体験入会はこちら
                 </h2>
                 <p className="mt-4 text-sm font-light leading-loose text-slate-600">
@@ -1055,11 +1048,12 @@ export default function Home() {
                 </p>
                 <motion.a
                   href="https://app.studyops.jp/dashboard"
-                  className="mt-8 inline-flex items-center whitespace-nowrap border border-slate-900 bg-slate-900 px-6 py-3.5 text-xs font-medium tracking-wide text-white transition-colors hover:bg-slate-800 md:px-8 md:text-sm"
+                  className="mt-8 inline-flex items-center gap-2 whitespace-nowrap rounded-md border border-[#C5A059]/60 bg-slate-900 px-6 py-3.5 text-xs font-medium tracking-wide text-white shadow-md transition-all duration-200 hover:shadow-lg hover:opacity-90 md:px-8 md:text-sm"
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   まずは7日間 無料トライアル
+                  <ArrowRight className="h-4 w-4" />
                 </motion.a>
               </div>
 
@@ -1111,6 +1105,9 @@ export default function Home() {
             </Link>
             <Link href="/disclaimer" className="text-slate-500 transition-colors hover:text-slate-800">
               免責事項
+            </Link>
+            <Link href="/tokushoho" className="text-slate-500 transition-colors hover:text-slate-800">
+              特定商取引法に基づく表記
             </Link>
           </nav>
           <p className="text-sm text-slate-400">

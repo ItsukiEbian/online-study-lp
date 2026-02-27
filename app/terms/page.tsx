@@ -34,6 +34,9 @@ function SimpleFooter() {
           <Link href="/disclaimer" className="text-slate-500 transition-colors hover:text-slate-800">
             免責事項
           </Link>
+          <Link href="/tokushoho" className="text-slate-500 transition-colors hover:text-slate-800">
+            特定商取引法に基づく表記
+          </Link>
         </nav>
         <p className="text-sm text-slate-400">
           © {new Date().getFullYear()} Study Ops. All rights reserved.
