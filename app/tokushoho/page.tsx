@@ -10,7 +10,7 @@ const rows = [
     { label: "屋号", value: "studyops" },
     {
         label: "事業者の所在地",
-        value: "〒000-0000 〇〇県〇〇市〇〇町1-2-3",
+        value: "〒450-0002 愛知県名古屋市中村区名駅4丁目24番5号第2森ビル401",
     },
     {
         label: "事業者の連絡先（電話番号）",
@@ -18,7 +18,7 @@ const rows = [
     },
     {
         label: "事業者の連絡先（メールアドレス）",
-        value: "info@example.com",
+        value: "y.studyops@gmail.com",
     },
     {
         label: "販売価格",
